@@ -12,7 +12,7 @@ get '/' do
         result = i * TIMES_TABLE
         text = "#{i} times #{TIMES_TABLE} = #{result}"
         output += "\n\t\t\t<li>#{text}</li>"
-      end
+    end
     output += "</ul></body></html>"
     output
 end
