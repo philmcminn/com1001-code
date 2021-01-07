@@ -9,4 +9,3 @@ def string_comparison(str1, str2)
     -1
 end
 
-puts string_comparison("s", "b")

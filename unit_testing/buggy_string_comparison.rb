@@ -7,5 +7,3 @@ def string_comparison(str1, str2)
     -1
 end
 
-puts string_comparison("aardvark", "aargh")
-puts string_comparison("sought", "bought")
