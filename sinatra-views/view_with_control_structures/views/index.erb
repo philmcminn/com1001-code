@@ -1,0 +1,17 @@
+<% title = "#{@times_table} times table" %>
+<html>
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <ul>
+    <% (1..@limit).each do |i| %>
+        <% result = i * @times_table %>    
+        <li>
+            <%= i %> times <%= @times_table %> = <%= result %>
+        </li>
+    <% end %>
+    </ul>
+</body>
+</html>
