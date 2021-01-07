@@ -1,7 +1,7 @@
-require 'sinatra'
-set :bind, '0.0.0.0'
+require "sinatra"
+set :bind, "0.0.0.0"
 
-get '/' do
+get "/" do
     puts "The user cannot see this!"
-    'Hi, folks!'
+    "Hi, folks!"
 end
