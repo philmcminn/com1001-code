@@ -1,7 +1,7 @@
 require "rspec"
 require "rack/test"
 
-require "../hello_world.rb"
+require_relative "hello_world"
 
 RSpec.describe "Hello World App" do
   include Rack::Test::Methods
