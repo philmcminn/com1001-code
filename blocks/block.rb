@@ -1,4 +1,4 @@
-def my_block(&block1, &block2)
+def my_block(&block1)
   puts "Hi!"
   block.call
   puts "That's all folks!"
