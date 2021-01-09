@@ -8,7 +8,7 @@ RSpec.describe "Times Table App" do
 
   def app
     Sinatra::Application
-  end 
+  end
 
   it "Says 3 Times Table" do
     get "/"

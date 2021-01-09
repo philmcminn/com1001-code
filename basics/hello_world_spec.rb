@@ -7,10 +7,10 @@ RSpec.describe "Hello World App" do
   include Rack::Test::Methods
 
   def app
-   Sinatra::Application
-  end 
+    Sinatra::Application
+  end
 
-  describe "GET /hello-world" do    
+  describe "GET /hello-world" do
     it "says 'Hello, world'" do
       get "/hello-world"
       expect(last_response.status).to eq(200)

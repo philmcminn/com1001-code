@@ -5,11 +5,11 @@ require_relative "multiple_routes"
 
 RSpec.describe "Multiple Routes App" do
   include Rack::Test::Methods
-  
+
   def app
     Sinatra::Application
-  end 
-  
+  end
+
   it "outputs the correct message for first-route" do
     get "/first-route"
     expect(last_response).to be_ok
