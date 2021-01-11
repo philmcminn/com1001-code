@@ -5,6 +5,6 @@ get "/get-route" do
   "This route is accessed by GET"
 end
 
-put "/put-route" do
+post "/post-route" do
   "This route is accessed by POST. It is inaccessible by typing the URL into your browser."
 end
