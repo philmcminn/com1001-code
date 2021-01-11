@@ -61,9 +61,9 @@ table below to help you out:
 
 | Examples Directory  | Lecture | Week |
 | ------------------- | ------- | ---- |
-| ``basics/``         | Yesterday My Program Worked. Today It Does Not! Why? | TBA  |
+| ``basics/``         | - An Introduction to Web Application Development | TBA  |
 | ``blocks/``         | Content | TBA  |
-| ``debugging/``      | Content | TBA  |
+| ``debugging/``      | - Yesterday My Program Worked. Today It Does Not! Why? (An Introduction to Debugging) | TBA  |
 | ``mvc/``            | Content | TBA  |
 | ``unit_testing/``   | Content | TBA  |
 | ``views/``          | Content | TBA  |
