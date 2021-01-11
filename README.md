@@ -14,7 +14,7 @@ web applications for testing; [SQLite](https://www.sqlite.org/) as a backend
 database, and [Sequel](https://sequel.jeremyevans.net/) – an Object-Relational
 Mapping framework.
 
-### Contents
+### Contents of this README file
 
 1. [Introduction](#1-introduction)
 2. [Getting Started and Cloning the Repository](#2-getting-started-and-cloning-the-repository)
