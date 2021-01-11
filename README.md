@@ -61,12 +61,12 @@ table below to help you out:
 
 | Examples Directory  | Lecture                                                | Week |
 | ------------------- | ------------------------------------------------------ | ---- |
-| ``basics/``         | - An Introduction to Web Application Development       | TBA  |
-| ``blocks/``         | - Ruby Blocks                                          | TBA  |
-| ``debugging/``      | - Yesterday My Program Worked. Today It Does Not! Why? | TBA  |
-| ``mvc/``            | - Web Application Architecture                         | TBA  |
-| ``unit_testing/``   | - These are Testing Times!                             | TBA  |
-| ``views/``          | - The Web Application Front-End                        | TBA  |
+| ``basics/``         | _An Introduction to Web Application Development_      | TBA  |
+| ``blocks/``         | _Ruby Blocks_                                          | TBA  |
+| ``debugging/``      | _Yesterday My Program Worked. Today It Does Not! Why?_ and _These are Testing Times!_ | TBA  |
+| ``mvc/``            | _Web Application Architecture_                         | TBA  |
+| ``unit_testing/``   | _These are Testing Times!_                             | TBA  |
+| ``views/``          | _The Web Application Front-End_                        | TBA  |
 
 # 4. If You Don't Like Codio...
 
