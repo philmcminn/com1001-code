@@ -71,7 +71,8 @@ table below to help you out:
 
 If you don't like developing with Codio, then sorry! Codio makes it really easy
 for us to provide a standardised environment to students in which we can help
-with common problems. This ideal in the current climate.
+with common problems. This ideal in the current pandemic climate, where our
+teaching delivery is pre-dominantly online. 
 
 Nevertheless, if you seriously dislike Codio there are a couple of options
 available to you, depending on your level of technical expertise:
