@@ -61,11 +61,11 @@ table below to help you out:
 
 | Examples Directory  | Lecture | Week |
 | ------------------- | ------- | ---- |
-| ``basics/``         | Content | TBA  |
+| ``basics/``         | Yesterday My Program Worked. Today It Does Not! Why? | TBA  |
 | ``blocks/``         | Content | TBA  |
 | ``debugging/``      | Content | TBA  |
 | ``mvc/``            | Content | TBA  |
-| ``unit_testing`/`   | Content | TBA  |
+| ``unit_testing/``   | Content | TBA  |
 | ``views/``          | Content | TBA  |
 
 # 4. If You Don't Like Codio...
