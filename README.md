@@ -39,13 +39,14 @@ To clone the repository you will need to issue the following command:
 
 ``git clone git@github.com:philmcminn/com1001-code.git``
 
-# Finally, If You Don't Like Codio!
+# If You Don't Like Codio...
 
 If you don't like developing with Codio, then sorry! Codio makes it really easy
 for us to provide a standardised environment to students in which we can help
 with common problems. This ideal in the current climate.
 
-Nevertheless, there are a couple of options available to you:
+Nevertheless, if you seriously dislike Codio there are a couple of options
+available to you, depending on your level of expertise:
 
 ## 1. Develop on Your Own Machine (Not Recommended)
 First, you can develop everything on your own machine. However, this means you
@@ -70,23 +71,23 @@ Instructions for your text editor/IDE vary of course, depending on what you're
 using – here are some useful pointers for VS Code, for example:
 https://code.visualstudio.com/docs/remote/ssh.
 
-## 3. Use VSCode on Codio itself
+## 3. Use VSCode on Codio Itself (Pretty Easily Done)
 
 Finally VSCode may be used in a web browser on Codio itself. On Codio, go to
 "Tools", then "Install Software". Scroll down the list and select "VSCode".
 VSCode is now available in your web browser from your Codio box on port 4000.
 The URL depends on your Codio box name. This is the subdomain of your Codio Box
-domain, which is output whenever you start a terminal session. For example, my
-Codio Box domain is ``north-mister.codio.io``. This means my box name is
-``north-mister``. This means my URL for VSCode, if I installed it, would be
-https://north-mister-4000.codio.io. The URL is essentially identical to the base
-URL of your web applications launched from Codio, as discussed in lectures, but
-using port 4000.
+domain, which Codio tells you whenever you start a terminal session. For
+example, it tells me that my Codio Box domain is ``north-mister.codio.io``. This
+means my box name is ``north-mister``. This means my URL for VSCode, if I
+installed it, would be https://north-mister-4000.codio.io. Note that this URL is
+essentially the same as the base URL of your web applications launched from
+Codio (as discussed in lectures), but using port 4000.
 
 # Problems or Feedback
 
-We welcome any feedback, including positive comments of any kind or constructive
-criticism that you may have.
+We welcome feedback including any constructive criticism or positive comments
+that you may have.
 
 If you are experiencing problems with using the repository, please contact the
 module lecturer that owns it – [Phil McMinn](https://mcminn.io). 
