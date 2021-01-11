@@ -59,14 +59,14 @@ snippet of the example on the slide.
 If you're struggling to find the lecture in which an example appears, I've provided the
 table below to help you out:
 
-| Examples Directory  | Lecture | Week |
-| ------------------- | ------- | ---- |
-| ``basics/``         | - An Introduction to Web Application Development | TBA  |
-| ``blocks/``         | Content | TBA  |
-| ``debugging/``      | - Yesterday My Program Worked. Today It Does Not! Why? (An Introduction to Debugging) | TBA  |
-| ``mvc/``            | Content | TBA  |
-| ``unit_testing/``   | Content | TBA  |
-| ``views/``          | Content | TBA  |
+| Examples Directory  | Lecture                                                | Week |
+| ------------------- | ------------------------------------------------------ | ---- |
+| ``basics/``         | - An Introduction to Web Application Development       | TBA  |
+| ``blocks/``         | - Ruby Blocks                                          | TBA  |
+| ``debugging/``      | - Yesterday My Program Worked. Today It Does Not! Why? | TBA  |
+| ``mvc/``            | - Web Application Architecture                         | TBA  |
+| ``unit_testing/``   | - These are Testing Times!                             | TBA  |
+| ``views/``          | - The Web Application Front-End                        | TBA  |
 
 # 4. If You Don't Like Codio...
 
