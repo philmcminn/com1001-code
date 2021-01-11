@@ -76,7 +76,7 @@ languages, as an example: https://code.visualstudio.com/docs/remote/ssh.
 
 ### 3. Use VSCode on Codio Itself (Pretty Easily Done, if You Followed the Instructions in the First Lecture)
 
-Finally VSCode may be used in a web browser on Codio itself. Assuming you have
+Finally, VSCode may be used in a web browser on Codio itself. Assuming you have
 followed in the instructions in the first lecture, on getting everything setup
 in Codio, then you will have a Codio box already up and running. In Codio, go to
 "Tools", then "Install Software". Scroll down the list and select "VSCode".
@@ -85,10 +85,10 @@ The URL you need to access it depends on your Codio box name. Your Codio box
 name is the subdomain of your Codio Box domain, which Codio tells you whenever
 you start a terminal session. For example, my terminal session tells me that my
 Codio box domain is ``north-mister.codio.io``. This means my box name is
-``north-mister``. This means my URL for VSCode, if I installed it, would be
-https://north-mister-4000.codio.io. Note that this URL is essentially the same
-as the base URL of your web applications launched from Codio (as discussed in
-lectures), but using port 4000.
+(perhaps appropriately) ``north-mister``. This means my URL for VSCode, if I
+installed it, would be https://north-mister-4000.codio.io. Note that this URL is
+essentially the same as the base URL of your web applications launched from
+Codio (as discussed in lectures), but using port 4000.
 
 # 5. Problems or Feedback
 
