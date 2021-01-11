@@ -71,7 +71,7 @@ this yourself – again, we are unable to provide assistance. See
 https://docs.codio.com/project/ide/boxes/#ssh-and-code-access-ssh-into-your-box.
 Instructions for your text editor/IDE vary of course, depending on what you're
 using – here are some useful pointers for
-(VSCode)[https://code.visualstudio.com/], a popular text editor and IDE for many
+[VSCode](https://code.visualstudio.com), a popular text editor and IDE for many
 languages, as an example: https://code.visualstudio.com/docs/remote/ssh.
 
 ### 3. Use VSCode on Codio Itself (Pretty Easily Done, if You Followed the Instructions in the First Lecture)
