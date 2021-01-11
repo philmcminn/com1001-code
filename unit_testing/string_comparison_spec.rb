@@ -4,7 +4,7 @@ require_relative "../debugging/string_comparison"
 RSpec.describe do
   describe "#string_comparison" do
     context "when given two empty strings" do
-      it "returns -1" do      
+      it "returns -1" do
         expect(string_comparison("", "")).to eq(-1)
       end
     end
@@ -33,7 +33,7 @@ RSpec.describe do
       end
     end
 
-    context "when given two strings of different length, first shorter than the second" do    
+    context "when given two strings of different length, first shorter than the second" do
       it "returns the length of the shorter string" do
         expect(string_comparison("abc", "abcdef")).to eq(3)
       end

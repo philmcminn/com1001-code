@@ -11,7 +11,7 @@ RSpec.describe "Hello World App" do
   end
 
   describe "GET /hello-world" do
-    it "says 'Hello, world'" do
+    it "says 'Hello, World!'" do
       get "/hello-world"
       expect(last_response.status).to eq(200)
       expect(last_response.body).to eq("Hello, World!")
