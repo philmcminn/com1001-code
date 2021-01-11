@@ -56,11 +56,17 @@ The lectures reference the code examples in this repository. The first time an
 example is mentioned, its path in the repository will be listed under the code
 snippet of the example on the slide. 
 
-If you're looking for the lecture in which an example appears, I've provided the
+If you're struggling to find the lecture in which an example appears, I've provided the
 table below to help you out:
 
-
-
+| Examples Directory  | Lecture | Week |
+| ------------------- | ------- | ---- |
+| ``basics/``         | Content |      |
+| ``blocks/``         | Content |      |
+| ``debugging/``      | Content |      |
+| ``mvc``             | Content |      |
+| ``unit_testing``    | Content |      |
+| ``views``           | Content |      |
 
 # 4. If You Don't Like Codio...
 
