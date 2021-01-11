@@ -84,8 +84,8 @@ VSCode will be now available in your web browser for use with your Codio files.
 The URL you need to access it depends on your Codio box name. Your Codio box
 name is the subdomain of your Codio Box domain, which Codio tells you whenever
 you start a terminal session. For example, my terminal session tells me that my
-Codio box domain is "``north-mister.codio.io``". This means my box name is
-"``north-mister``" (perhaps appropriately). This means my URL for VSCode, if I
+Codio box domain is ``north-mister.codio.io``. This means my box name is
+``north-mister`` (perhaps appropriately). This means my URL for VSCode, if I
 installed it, would be https://north-mister-4000.codio.io. Note that this URL is
 essentially the same as the base URL of your web applications launched from
 Codio (as discussed in lectures), but using port 4000.
@@ -96,7 +96,7 @@ We welcome feedback including any constructive criticism or positive comments
 that you may have.
 
 If you are experiencing problems with using the repository, please contact the
-module lecturer that owns it – [Phil McMinn](https://mcminn.io). 
+module lecturer – [Phil McMinn](https://mcminn.io). 
 
 Please note that the teaching team are limited in the help that we can offer on
 specific system setups. If you are experiencing significant difficulties, please
