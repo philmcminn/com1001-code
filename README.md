@@ -74,7 +74,7 @@ using – here are some useful pointers for
 (VSCode)[https://code.visualstudio.com/], a popular text editor and IDE for many
 languages, as an example: https://code.visualstudio.com/docs/remote/ssh.
 
-### 3. Use VSCode on Codio Itself (Pretty Easily Done)
+### 3. Use VSCode on Codio Itself (Pretty Easily Done, if You Followed the Instructions in the First Lecture)
 
 Finally VSCode may be used in a web browser on Codio itself. Assuming you have
 followed in the instructions in the first lecture, on getting everything setup
