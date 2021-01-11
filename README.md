@@ -1,4 +1,4 @@
-# Introduction
+# 1. Introduction
 
 Welcome! This repository contains code examples to support the lecture material
 and practical sessions to support the Spring Semester of the COM1001 module
@@ -16,16 +16,15 @@ Mapping framework.
 
 ### Contents
 
-* [Introduction](#introduction)
-* [Getting Started](#getting-started)
-    * [Cloning the Repository](#cloning-the-repository)
-* [Which Examples are Discussed in Which
-  Lectures](#which-examples-are-discussed-in-which-lectures)
-* [If You Don't Like Codio](#if-you-dont-like-codio)
-* [Problems or Feedback](#problems-or-feedback)
+* [1. Introduction](#introduction)
+* [2. Getting Started and Cloning the Repository](#getting-started-and-cloning-the-repository)
+* [3. Which Code Examples are Discussed in Which
+  Lectures?](#which-examples-are-discussed-in-which-lectures)
+* [4. If You Don't Like Codio](#if-you-dont-like-codio)
+* [5. Problems or Feedback](#problems-or-feedback)
 
 
-# Getting Started
+# 2. Getting Started and Cloning the Repository
 
 The preferred development platform for this module is
 [Codio](https://www.codio.com/), which you will have encountered in the Autumn
@@ -33,13 +32,15 @@ Semester. The first lecture of the Spring will show you how to get everything
 setup. This lecture is available as a video on
 (Blackboard[https://vle.shef.ac.uk]).
 
-## Cloning the Repository
+### Cloning the Repository
 
 To clone the repository you will need to issue the following command:
 
 ``git clone git@github.com:philmcminn/com1001-code.git``
 
-# If You Don't Like Codio...
+# 3. Which Code Examples are Discussed in Which Lectures?
+
+# 4. If You Don't Like Codio...
 
 If you don't like developing with Codio, then sorry! Codio makes it really easy
 for us to provide a standardised environment to students in which we can help
@@ -48,7 +49,8 @@ with common problems. This ideal in the current climate.
 Nevertheless, if you seriously dislike Codio there are a couple of options
 available to you, depending on your level of expertise:
 
-## 1. Develop on Your Own Machine (Not Recommended)
+### 1. Develop on Your Own Machine (Not Recommended)
+
 First, you can develop everything on your own machine. However, this means you
 installing Ruby and getting everything working yourself – we are unable to
 provide support for students' individual machines. While getting Ruby set up
@@ -58,7 +60,7 @@ who may prefer to use Codio, opening up various possibilities for
 incompatibilities and problems. Finally, remember that the team project will be
 marked using Codio – so everything needs to work there out of the box.
 
-## 2. SSH into Codio from Your Own Machine (Slightly More Endorsed, But Potentially Tricky to Setup)
+### 2. SSH into Codio from Your Own Machine (Slightly More Endorsed, But Potentially Tricky to Setup)
 
 The second option may be more preferable – where you SSH into your Codio box
 from your text editor/IDE on your own machine. This gives you the best of both
@@ -71,7 +73,7 @@ Instructions for your text editor/IDE vary of course, depending on what you're
 using – here are some useful pointers for VS Code, for example:
 https://code.visualstudio.com/docs/remote/ssh.
 
-## 3. Use VSCode on Codio Itself (Pretty Easily Done)
+### 3. Use VSCode on Codio Itself (Pretty Easily Done)
 
 Finally VSCode may be used in a web browser on Codio itself. On Codio, go to
 "Tools", then "Install Software". Scroll down the list and select "VSCode".
@@ -84,7 +86,7 @@ installed it, would be https://north-mister-4000.codio.io. Note that this URL is
 essentially the same as the base URL of your web applications launched from
 Codio (as discussed in lectures), but using port 4000.
 
-# Problems or Feedback
+# 5. Problems or Feedback
 
 We welcome feedback including any constructive criticism or positive comments
 that you may have.
