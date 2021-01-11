@@ -35,8 +35,12 @@ from your text editor on your machine. This gives you the best of both worlds
 with the ease of Ruby being set up for you on Codio, and you essentially using
 the same platform as everyone else. However, you will need to navigate the
 instructions for doing this yourself. See
-[https://docs.codio.com/project/ide/boxes/#ssh-and-code-access-ssh-into-your-box]
+https://docs.codio.com/project/ide/boxes/#ssh-and-code-access-ssh-into-your-box
 Instructions for your text editor vary of course, here are some useful pointers
-for VS Code: [https://code.visualstudio.com/docs/remote/ssh]
+for VS Code: https://code.visualstudio.com/docs/remote/ssh
 
 # Cloning the Repository
+
+To clone the repository you will need to issue the following command:
+
+``git clone git@github.com:philmcminn/com1001-code.git``
