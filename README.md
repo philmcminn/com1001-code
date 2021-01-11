@@ -18,11 +18,10 @@ Mapping framework.
 
 * [Introduction](#introduction)
 * [Getting Started](#getting-started)
-    * [Using Codio](#using-codio)
-    * [Setting Up Your Own Machine](#setting-up-your-own-machine)
-    * [Cloning and Forking this Repository](#cloning-and-forking-the-repository)
-* [Compiling and Running Code in the
-  Repository](#compiling-and-running-code-in-the-repository)
+    * [Cloning the Repository](#cloning-the-repository)
+* [Which Examples are Discussed in Which
+  Lectures](#which-examples-are-discussed-in-which-lectures)
+* [If You Don't Like Codio](#if-you-dont-like-codio)
 * [Problems or Feedback](#problems-or-feedback)
 
 
@@ -31,11 +30,10 @@ Mapping framework.
 The preferred development platform for this module is
 [Codio](https://www.codio.com/), which you will have encountered in the Autumn
 Semester. The first lecture of the Spring will show you how to get everything
-setup. This lecture is available as a video on (Blackboard[https://vle.shef.ac.uk]).
+setup. This lecture is available as a video on
+(Blackboard[https://vle.shef.ac.uk]).
 
-
-
-# Cloning the Repository
+## Cloning the Repository
 
 To clone the repository you will need to issue the following command:
 
@@ -43,7 +41,13 @@ To clone the repository you will need to issue the following command:
 
 # Finally, If You Don't Like Codio!
 
-If you don't like developing with Codio, there are a couple of options available to you.
+If you don't like developing with Codio, then sorry! Codio makes it really easy
+for us to provide a standardised environment to students in which we can help
+with common problems. This ideal in the current climate.
+
+Nevertheless, there are a couple of options available to you:
+
+## 1. Develop on Your Own Machine (Not Recommended)
 First, you can develop everything on your own machine. However, this means you
 installing Ruby and getting everything working yourself – we are unable to
 provide support for students' individual machines. While getting Ruby set up
@@ -52,6 +56,8 @@ encounter more problems. Also, do not forget your team members and your project
 who may prefer to use Codio, opening up various possibilities for
 incompatibilities and problems. Finally, remember that the team project will be
 marked using Codio – so everything needs to work there out of the box.
+
+## 2. SSH into Codio from Your Own Machine (Slightly More Endorsed, But Potentially Tricky to Setup)
 
 The second option may be more preferable – where you SSH into your Codio box
 from your text editor/IDE on your own machine. This gives you the best of both
@@ -64,5 +70,27 @@ Instructions for your text editor/IDE vary of course, depending on what you're
 using – here are some useful pointers for VS Code, for example:
 https://code.visualstudio.com/docs/remote/ssh.
 
+## 3. Use VSCode on Codio itself
+
 Finally VSCode may be used in a web browser on Codio itself. On Codio, go to
-"Tools", then "Install Software". Scroll down the list and select "VSCode". 
+"Tools", then "Install Software". Scroll down the list and select "VSCode".
+VSCode is now available in your web browser from your Codio box on port 4000.
+The URL depends on your Codio box name. This is the subdomain of your Codio Box
+domain, which is output whenever you start a terminal session. For example, my
+Codio Box domain is ``north-mister.codio.io``. This means my box name is
+``north-mister``. This means my URL for VSCode, if I installed it, would be
+https://north-mister-4000.codio.io. The URL is essentially identical to the base
+URL of your web applications launched from Codio, as discussed in lectures, but
+using port 4000.
+
+# Problems or Feedback
+
+We welcome any feedback, including positive comments of any kind or constructive
+criticism that you may have.
+
+If you are experiencing problems with using the repository, please contact the
+module lecturer that owns it – [Phil McMinn](https://mcminn.io). 
+
+Please note that the teaching team are limited in the help that we can offer on
+specific system setups. If you are experiencing significant difficulties, please
+use Codio, where we can give you full support if you run into problems. 
