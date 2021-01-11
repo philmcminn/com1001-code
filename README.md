@@ -61,12 +61,12 @@ table below to help you out:
 
 | Examples Directory  | Lecture | Week |
 | ------------------- | ------- | ---- |
-| ``basics/``         | Content |      |
-| ``blocks/``         | Content |      |
-| ``debugging/``      | Content |      |
-| ``mvc``             | Content |      |
-| ``unit_testing``    | Content |      |
-| ``views``           | Content |      |
+| ``basics/``         | Content | TBA  |
+| ``blocks/``         | Content | TBA  |
+| ``debugging/``      | Content | TBA  |
+| ``mvc/``            | Content | TBA  |
+| ``unit_testing`/`   | Content | TBA  |
+| ``views/``          | Content | TBA  |
 
 # 4. If You Don't Like Codio...
 
