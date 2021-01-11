@@ -16,12 +16,12 @@ Mapping framework.
 
 ### Contents
 
-* [1. Introduction](#introduction)
-* [2. Getting Started and Cloning the Repository](#getting-started-and-cloning-the-repository)
+* [1. Introduction](#1-introduction)
+* [2. Getting Started and Cloning the Repository](#2-getting-started-and-cloning-the-repository)
 * [3. Which Code Examples are Discussed in Which
-  Lectures?](#which-examples-are-discussed-in-which-lectures)
-* [4. If You Don't Like Codio](#if-you-dont-like-codio)
-* [5. Problems or Feedback](#problems-or-feedback)
+  Lectures?](#3-which-examples-are-discussed-in-which-lectures)
+* [4. If You Don't Like Codio](#4-if-you-dont-like-codio)
+* [5. Problems or Feedback](#5-problems-or-feedback)
 
 
 # 2. Getting Started and Cloning the Repository
