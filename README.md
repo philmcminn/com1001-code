@@ -47,7 +47,7 @@ for us to provide a standardised environment to students in which we can help
 with common problems. This ideal in the current climate.
 
 Nevertheless, if you seriously dislike Codio there are a couple of options
-available to you, depending on your technical level of expertise:
+available to you, depending on your level of technical expertise:
 
 ### 1. Develop on Your Own Machine (Not Recommended)
 
