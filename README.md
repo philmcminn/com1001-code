@@ -30,7 +30,7 @@ The preferred development platform for this module is
 [Codio](https://www.codio.com/), which you will have encountered in the Autumn
 Semester. The first lecture of the Spring will show you how to get everything
 setup. This lecture is available as a video on
-(Blackboard[https://vle.shef.ac.uk]).
+(Blackboard)[https://vle.shef.ac.uk].
 
 ### Cloning the Repository
 
@@ -70,21 +70,25 @@ everyone else. However, you will need to navigate the instructions for doing
 this yourself – again, we are unable to provide assistance. See
 https://docs.codio.com/project/ide/boxes/#ssh-and-code-access-ssh-into-your-box
 Instructions for your text editor/IDE vary of course, depending on what you're
-using – here are some useful pointers for VS Code, for example:
-https://code.visualstudio.com/docs/remote/ssh.
+using – here are some useful pointers for
+(VSCode)[https://code.visualstudio.com/], a popular text editor and IDE for many
+languages, as an example: https://code.visualstudio.com/docs/remote/ssh.
 
 ### 3. Use VSCode on Codio Itself (Pretty Easily Done)
 
-Finally VSCode may be used in a web browser on Codio itself. On Codio, go to
+Finally VSCode may be used in a web browser on Codio itself. Assuming you have
+followed in the instructions in the first lecture, on getting everything setup
+in Codio, then you will have a Codio box already up and running. In Codio, go to
 "Tools", then "Install Software". Scroll down the list and select "VSCode".
-VSCode is now available in your web browser from your Codio box on port 4000.
-The URL depends on your Codio box name. This is the subdomain of your Codio Box
-domain, which Codio tells you whenever you start a terminal session. For
-example, it tells me that my Codio Box domain is ``north-mister.codio.io``. This
-means my box name is ``north-mister``. This means my URL for VSCode, if I
-installed it, would be https://north-mister-4000.codio.io. Note that this URL is
-essentially the same as the base URL of your web applications launched from
-Codio (as discussed in lectures), but using port 4000.
+VSCode will be now available in your web browser for use with your Codio files.
+The URL you need to access it depends on your Codio box name. Your Codio box
+name is the subdomain of your Codio Box domain, which Codio tells you whenever
+you start a terminal session. For example, my terminal session tells me that my
+Codio box domain is ``north-mister.codio.io``. This means my box name is
+``north-mister``. This means my URL for VSCode, if I installed it, would be
+https://north-mister-4000.codio.io. Note that this URL is essentially the same
+as the base URL of your web applications launched from Codio (as discussed in
+lectures), but using port 4000.
 
 # 5. Problems or Feedback
 
