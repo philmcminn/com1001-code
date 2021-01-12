@@ -2,7 +2,7 @@ require "rspec"
 require "rack/test"
 
 ENV['APP_ENV'] = "test"
-require_relative "../../app.rb"
+require_relative "../../app"
 
 RSpec.describe "Football Players App" do
   include Rack::Test::Methods
@@ -32,6 +32,6 @@ RSpec.describe "Football Players App" do
         expect(last_response).to be_ok
         expect(last_response.body).to include("Test Player")
       end
-    end    
+    end
   end
 end
