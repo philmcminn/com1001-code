@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Football Players Database</title>
+</head>
+<body>
+  <% if @players.count > 0 %>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Club</th>
+        <th>Nationality</th>
+        <th>Position</th>
+        <th>Age</th>
+      </tr>
+    <% @players.each do |player| %>
+      <tr>
+        <td><%= player.name %></td>
+        <td><%= player.club %></td>
+        <td><%= player.country %></td>
+        <td><%= player.position %></td>
+        <td><%= player.age %></td>
+      </tr>
+    <% end %> 
+    </table>
+  <% else %>
+    <p>The database was empty.</p>
+  <% end %>
+</body>
