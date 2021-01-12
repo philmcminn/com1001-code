@@ -62,8 +62,8 @@ table below to help you out:
 | ------------------- | ------------------------------------------------------------------------------------- | ---- |
 | ``basics/``         | _An Introduction to Web Application Development_                                      | TBA  |
 | ``blocks/``         | _Ruby Blocks_                                                                         | TBA  |
+| ``controllers/``    | _Web Application Architecture_                                                        | TBA  |
 | ``debugging/``      | _Yesterday My Program Worked. Today It Does Not! Why?_ and _These are Testing Times!_ | TBA  |
-| ``mvc/``            | _Web Application Architecture_                                                        | TBA  |
 | ``unit_testing/``   | _These are Testing Times!_                                                            | TBA  |
 | ``views/``          | _The Web Application Front-End_                                                       | TBA  |
 

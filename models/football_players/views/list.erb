@@ -1,8 +1,10 @@
 <html>
 <head>
     <title>Football Players Database</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+  <h1>Football Players</h1>
   <% if @players.count > 0 %>
     <table>
       <tr>
@@ -23,6 +25,6 @@
     <% end %> 
     </table>
   <% else %>
-    <p>The database was empty.</p>
+    <p>The database is empty!</p>
   <% end %>
 </body>

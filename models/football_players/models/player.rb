@@ -6,8 +6,8 @@ class Player < Sequel::Model
     "#{first_name} #{surname}"
   end
 
-  def age
+  def age(at_date = Date.today)
     dob = Date.strptime(date_of_birth, "%Y-%m-%d")
-    TimeDifference.between(dob, Date.today).in_years.floor
+    TimeDifference.between(dob, at_date).in_years.floor
   end
 end
