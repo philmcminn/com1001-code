@@ -1,9 +1,12 @@
 <%= erb :"common/header" %>
-<% if @num_visits == 0 %>
+<% if @total_num_visits == 0 %>
   <p>This is your first visit to this web page.</p>
 <% else %>
-  <p>You have visited this page <strong><%= @num_visits %> times</strong>.</p>
-  <p>Your last visit was on <strong><%= @last_visited %></strong></p>  
+  <p>You have visited this page a total of <strong><%= @total_num_visits %></strong> time(s) in the last day,
+     <strong><%= @session_num_visits %></strong> of which were in this session.</p>
+  <p>Your last visit was on <strong><%= @last_visited %></strong>.</p>  
 <% end %>
 <p><a href="/">Refresh this page to update the cookies</a> | <a href="/delete">Delete your cookies</a></p>
+<p>(Quit your browser, re-open it and load this page again to see the total and session counts differ.
+You can also try restarting the web server while you're doing this. It should still work.)</p>
 <%= erb :"common/footer" %>
