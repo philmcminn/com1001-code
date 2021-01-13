@@ -4,6 +4,9 @@ AllCops:
 Metrics/BlockLength:
   IgnoredMethods: ["describe", "context"]
 
+Style/For:
+  Enabled: false
+
 Style/FrozenStringLiteralComment:
   Enabled: false
 

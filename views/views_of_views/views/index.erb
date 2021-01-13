@@ -1,5 +1,5 @@
-<%= erb :application_header %>
+<%= erb :"common/header" %>
 
-<p>The current time is <%= Time.now %>.</p>
+<p>... is <%= Time.now.strftime("%a %b %d, %I:%M:%S %p") %>.</p>
 
-<%= erb :application_footer %>
+<%= erb :"common/footer" %>

@@ -1,5 +1,5 @@
-require "sequel" 
-require "time_difference" 
+require "sequel"
+require "time_difference"
 
 DB = Sequel.connect("sqlite://../databases/football_players.sqlite3")
 
@@ -9,4 +9,3 @@ end
 
 player = Player.first
 puts player
-

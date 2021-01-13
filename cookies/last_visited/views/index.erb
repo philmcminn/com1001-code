@@ -1,0 +1,9 @@
+<%= erb :"common/header" %>
+<% if @num_visits == 0 %>
+  <p>This is your first visit to this web page.</p>
+<% else %>
+  <p>You have visited this page <strong><%= @num_visits %> times</strong>.</p>
+  <p>Your last visit was on <strong><%= @last_visited %></strong></p>  
+<% end %>
+<p><a href="/">Refresh this page to update the cookies</a> | <a href="/delete">Delete your cookies</a></p>
+<%= erb :"common/footer" %>
