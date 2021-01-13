@@ -21,3 +21,7 @@ INSERT INTO players VALUES(9, "Kevin", "De Bruyne", "M", "1991-06-28", "Belgium"
 INSERT INTO players VALUES(10, "Vivianne", "Miedema", "F", "1996-07-15", "Netherlands", "Forward", "Arsenal");
 INSERT INTO players VALUES(11, "Michael", "Keane", "M", "1993-01-11", "England", "Defender", "Everton");
 INSERT INTO players VALUES(12, "Ellie", "Roebuck", "F", "1999-09-23", "England", "Goalkeeper", "Manchester City");
+
+-- SELECT/WHERE
+-- UPDATE
+-- DELETE
