@@ -1,0 +1,5 @@
+source "https://rubygems.org" do
+  gem "openssl"
+  gem "sequel"
+  gem "sinatra"
+end

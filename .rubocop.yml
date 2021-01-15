@@ -7,6 +7,9 @@ Metrics/BlockLength:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+Style/MixinUsage:
+  Enabled: false
+
 Style/MutableConstant:
   Enabled: false
 
