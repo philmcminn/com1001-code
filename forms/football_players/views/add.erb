@@ -1,0 +1,14 @@
+<% @subtitle = "Add Player" %>
+<%= erb :"common/header" %>
+
+<% if @errors.size.zero? %>
+    <p><strong class="error">Please correct the errors below:</strong></p>
+<% end %>
+
+<form method="post">
+    <%= erb :"common/player_form" %>
+</form>
+
+<p class="navigation">Return to <a href="/search">Player Search</a>.</p>
+
+<%= erb :"common/footer" %>

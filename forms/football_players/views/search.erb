@@ -1,0 +1,42 @@
+<% @subtitle = "Search" %>
+<%= erb :"common/header" %>
+
+<div class="navigation">
+  <form>
+    <p>Enter a club name to show only players for that club: 
+    <input type="text" name="club_search" value="<%= h @club_search %>"/>
+    <input type="submit" value="Submit" /></p>
+  </form>
+
+  <p><a href="/add">Add a new player to the database</a>.</p>
+</div>
+
+<br />
+
+<% if @players.count > 0 %>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Club</th>
+      <th>Country</th>
+      <th>Position</th>
+      <th>Age</th>
+    </tr>
+  <% @players.each do |player| %>
+    <tr>
+      <td><%= h player.name %></td>
+      <td><%= h player.gender %></td>
+      <td><%= h player.club %></td>
+      <td><%= h player.country %></td>
+      <td><%= h player.position %></td>
+      <td><%= h player.age %></td>
+      <td><a href="/edit?id=<%= h player.id %>">Edit</a></td>
+    </tr>
+  <% end %> 
+  </table>
+<% else %>
+  <p>Your search revealed no players.</p>
+<% end %>
+
+<%= erb :"common/footer" %>

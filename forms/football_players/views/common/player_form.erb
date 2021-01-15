@@ -1,0 +1,29 @@
+<p class="label">First name</p>
+<p class="field"><input type="text" name="first_name" value="<%= h @player.first_name %>" /></p>
+<% if @errors.include?("first_name") %><p class="error"><strong>Please enter a first name</strong></p><% end %>
+
+<p class="label">Surname</p>
+<p class="field"><input type="text" name="surname" value="<%= h @player.surname %>" /></p>
+<% if @errors.include?("surname") %><p class="error"><strong>Please enter a surname</strong></p><% end %>
+
+<p class="label">Gender</p>
+<p class="field"><input type="text" name="gender" value="<%= h @player.gender %>" /></p>
+<% if @errors.include?("gender") %><p class="error"><strong>Please enter a gender</strong></p><% end %>
+
+<p class="label">Club</p>
+<p class="field"><input type="text" name="club" value="<%= h @player.club %>" /></p>
+<% if @errors.include?("club") %><p class="error"><strong>Please enter a club</strong></p><% end %>
+
+<p class="label">Country</p>
+<p class="field"><input type="text" name="country" value="<%= h @player.country %>" /></p>
+<% if @errors.include?("country") %><p class="error"><strong>Please enter a country</strong></p><% end %>
+
+<p class="label">Position</p>
+<p class="field"><input type="text" name="position" value="<%= h @player.position %>" /></p>
+<% if @errors.include?("position") %><p class="error"><strong>Please enter a position</strong></p><% end %>
+
+<p class="label">Date of Birth (in the form YYYY-MM-DD)</p>
+<p class="field"><input type="text" name="date_of_birth" value="<%= h @player.date_of_birth %>" /></p>
+<% if @errors.include?("date_of_birth") %><p class="error"><strong>Please enter a valid date</strong></p><% end %>
+
+<p class="submit"><input type="submit" value="Submit" /></p>

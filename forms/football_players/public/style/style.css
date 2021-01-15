@@ -14,3 +14,37 @@ td {
 th, td {
     padding: 5px;
 }
+
+.success {
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+.label {
+    font-weight: bold;
+    padding: 15px 0 5px 0;
+    margin: 0;
+}
+
+.field {
+    padding: 0;
+    margin: 0;    
+}
+
+.submit {
+    padding: 30px 0 20px 0;
+    margin: 0;
+}
+
+.navigation {
+    padding: 5px;
+    background: #dedede;
+}
+
+.warning {
+    padding: 5px;
+    background: #fbbaba;
+}
