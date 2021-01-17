@@ -4,15 +4,15 @@ get "/validated-form" do
 
   @form_was_submitted = !@field1.nil?
 
-  @submission_error = nil
-  @field1_error = nil
-  @field2_error = nil
+  @submission_error = false
+  @field1_error = false
+  @field2_error = false
 
   if @form_was_submitted
-    @field1_error = "Please enter a value" if @field1.empty?
-    @field2_error = "Please enter a value" if @field2.empty?
-
-    @submission_error = "Please correct the errors below" unless @field1_error.nil? && @field2_error.nil?
+    # validate
+    @field1_error = @field1.empty?
+    @field2_error = @field2.empty?
+    @submission_error = @field1_error || @field2_error
   end
 
   erb :validated_form

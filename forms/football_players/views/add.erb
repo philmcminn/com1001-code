@@ -1,7 +1,7 @@
 <% @subtitle = "Add Player" %>
 <%= erb :"common/header" %>
 
-<% if @errors.size.zero? %>
+<% unless @errors.size.zero? %>
     <p><strong class="error">Please correct the errors below:</strong></p>
 <% end %>
 

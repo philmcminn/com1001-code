@@ -1,0 +1,17 @@
+AllCops:
+  NewCops: enable
+  
+Metrics/AbcSize:
+  IgnoredMethods: ["validate"]
+
+Metrics/CyclomaticComplexity:
+  IgnoredMethods: ["validate"]
+
+Style/MixinUsage:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false

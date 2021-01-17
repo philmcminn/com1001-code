@@ -5,12 +5,18 @@ end
 post "/post-form" do
   @form_was_submitted = true
 
-  @field1 = params.fetch("field1", "").strip
-  @field2 = params.fetch("field2", "").strip
+  # load
+  @field1 = params.fetch("field1", "")
+  @field2 = params.fetch("field2", "")
 
-  @field1_error = @field1.empty? ? "Please enter a value" : nil
-  @field2_error = @field2.empty? ? "Please enter a value" : nil
-  @submission_error = !@field1_error.nil? || !@field2_error.nil? ? "Please correct the errors below" : nil
+  # sanitize
+  @field1.strip!
+  @field2.strip!
+
+  # validate
+  @field1_error = @field1.empty?
+  @field2_error = @field2.empty?
+  @submission_error = @field1_error || @field2_error
 
   erb :post_form
 end

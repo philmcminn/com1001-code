@@ -32,7 +32,7 @@ end
 
 get "/edit" do
   id = params["id"]
-  @player = Player[id] if Player.valid_id?(id)
+  @player = Player[id] if Player.id_exists?(id)
   @errors = Set.new
   erb :edit
 end
@@ -40,7 +40,7 @@ end
 post "/edit" do
   id = params["id"]
 
-  if Player.valid_id?(id)
+  if Player.id_exists?(id)
     @player = Player[id]
     @player.load(params)
     @player.sanitize
@@ -58,7 +58,7 @@ end
 post "/delete" do
   id = params["id"]
 
-  if Player.valid_id?(id)
+  if Player.id_exists?(id)
     player = Player[id]
     player.delete
     redirect "/search"

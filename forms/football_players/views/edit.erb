@@ -7,7 +7,7 @@
 
 <% else %>    
 
-    <% if @errors.size.zero? %>
+    <% unless @errors.size.zero? %>
         <p><strong class="error">Please correct the errors below:</strong></p>
     <% end %>
 
@@ -17,11 +17,11 @@
     </form>
 
     <div class="warning">
-        <p><strong>WARNING! deleting a record cannot be undone.</strong></p>
+        <p><strong>WARNING! Deleting a record cannot be undone.</strong></p>
 
         <form method="post" action="/delete">
             <input type="hidden" name="id" value="<%= @player.id %>" />
-            <input type="submit" value="Delete" onclick="return confirm('Are you sure?');" />
+            <input type="submit" value="Delete" onclick="return confirm('Are you sure?')" />
         </form>
     </div>
 
