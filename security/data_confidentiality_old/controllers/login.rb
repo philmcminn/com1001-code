@@ -8,15 +8,9 @@ get "/login" do
 end
 
 post '/login' do
-  # load
-  username = params.fetch("username", "")
-  password = params.fetch("password", "")
+  username = params.fetch("username", "").strip
+  password = params.fetch("password", "").strip
 
-  # sanitize
-  username.strip!
-  password.strip! 
-
-  # validate
   @username_error = username.empty? ? "Please enter a username" : nil
   @password_error = password.empty? ? "Please enter a password" : nil
   @submission_error = nil

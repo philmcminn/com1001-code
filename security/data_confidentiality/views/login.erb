@@ -4,10 +4,28 @@
 
 <form method="post" action="/login">
 
-  <%= erb :"common/form_fields" %>
+<% unless @submission_error.nil? %>
+<p><strong class="error"><%= @submission_error %></strong></p>
+<% end %>
+
+<p>
+    Username: <br />
+    <input type="text" name="username" value="<%= @username %>"/>
+    <% unless @username_error.nil? %>
+    <br /><strong class="error"><%= @username_error %></strong>
+    <% end %>
+</p>
+
+<p>
+    Password: <br />
+    <input type="password" name="password" />
+    <% unless @password_error.nil? %>
+    <br /><strong class="error"><%= @password_error %></strong>
+    <% end %>
+</p>
+
+<p><input type="submit" value="Submit"></p>
 
 </form>
-
-<p>If you don't have an account, you can <a href="/sign-up">sign-up</a>.</p>
 
 <%= erb :"common/footer" %>
