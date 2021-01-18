@@ -1,71 +1,59 @@
+require_relative "setup_db"
 require "openssl"
-require 'sqlite3'
 
 #
 # 1) Get the user to enter their information
 #
+users = DB[:users] 
 data = {}
 
 puts "Please enter your username:"
-data["username"] = gets.chomp
+username = gets.chomp
+
+unless users.where(:username => username).count.zero?
+  abort "Sorry, the username '#{username}' already exists - try another one."
+end
 
 puts "Please enter your password:"
-data["password"] = gets.chomp
+password = gets.chomp
 
-puts "Please enter your confidential data (1/3)"
-data["confidential1"] = gets.chomp
+puts "Please enter your address"
+address = gets.chomp
 
-puts "Please enter your confidential data (2/3)"
-data["confidential2"] = gets.chomp
-
-puts "Please enter your confidential data (3/3)"
-data["confidential3"] = gets.chomp
+puts "Please enter your telephone number"
+telephone_number = gets.chomp
 
 #
 # 2) Encrypt the password and data
 #
 
-# Set up the AES cipher
+# Set up the AES cipher and set it to encrypt mode
 aes = OpenSSL::Cipher.new("AES-128-CBC")
-
-# Set cipher for encryption
 aes.encrypt
 
-# Generate a random initial vector
+# Generate a random initial vector and key
 iv = aes.random_iv
-
-# Generate key 1
 key = aes.random_key
+
+# Encrypt the user's address
+encrypted_address = aes.update(address) + aes.final
+
+# Reset (we must to do this before every following call to "aes.update(...)"
+# and encrypt the user's telephone number
+aes.reset
+encrypted_telephone_number = aes.update(telephone_number) + aes.final
 
 # Generate a random salt
 salt = OpenSSL::Random.random_bytes(16)
 
-# Encrypt our user data with key 1
-encrypted_confidential1 = aes.update(data["confidential1"]) + aes.final
-encrypted_confidential2 = aes.update(data["confidential2"]) + aes.final
-encrypted_confidential3 = aes.update(data["confidential3"]) + aes.final
+# Derive a 16-byte key from the user's password
+aes.key = OpenSSL::PKCS5.pbkdf2_hmac_sha1(password, salt, 20_000, 16)
 
-# Generate key 2 from the password
-aes.key = OpenSSL::PKCS5.pbkdf2_hmac_sha1(data["password"], salt, 20_000, 16)
-
-# Encrypt key 1 with key 2
-key_crypt = aes.update(key) + aes.final
+# Reset and use that key to encrypt the previous key that encrypted the user's data
+aes.reset
+encrypted_key = aes.update(key) + aes.final
 
 #
-# 3) Save the data
+# 3) Save username, encryption data, and encrypted user data
 #
-encrypted = {}
-
-# this is the only part of the record that's not actually encrypted, of course.
-encrypted["username"] = data["username"]
-encrypted["iv"] = iv
-encrypted["salt"] = salt
-encrypted["key_crypt"] = key_crypt
-encrypted["confidential1"] = encrypted_confidential1
-encrypted["confidential2"] = encrypted_confidential2
-encrypted["confidential3"] = encrypted_confidential3
-
-db = SQLite3::Database.new './db.sqlite3'
-
-query = 'INSERT INTO user VALUES (?, ?, ?, ?, ?, ?, ?)'
-db.execute(query, encrypted["username"], encrypted["iv"], encrypted["salt"], encrypted["key_crypt"], encrypted["confidential1"], encrypted["confidential2"], encrypted["confidential3"])
+users.insert(username, iv, salt, encrypted_key, encrypted_address, encrypted_telephone_number)
