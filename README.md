@@ -89,7 +89,9 @@ teaching is predominantly being delivered online.
 Nevertheless, if you seriously dislike Codio there are a couple of options
 available to you, depending on your level of technical expertise:
 
-### 1. Develop on Your Own Machine (Not Recommended)
+### 1. Develop on Your Own Machine
+
+**Rating: Not Recommended**
 
 First, you can develop everything on your own machine. However, this means you
 installing Ruby and getting everything working yourself – we are unable to
@@ -101,7 +103,9 @@ incompatibilities and problems. Finally, remember that the team project will be
 marked using Codio. So everything needs to work on Codio, because the markers
 will not be debugging your code to get it to run.
 
-### 2. SSH into Codio from Your Own Machine (Slightly More Endorsed, But Potentially Tricky to Setup)
+### 2. SSH into Codio from Your Own Machine
+
+**Rating: Slightly More Endorsed, But Potentially Tricky to Setup**
 
 The second option may be more preferable – where you SSH into your Codio box
 from your text editor/IDE on your own machine. This gives you the best of both
@@ -115,7 +119,7 @@ using – here are some useful pointers for
 [VSCode](https://code.visualstudio.com), a popular text editor and IDE for many
 languages, as an example: https://code.visualstudio.com/docs/remote/ssh.
 
-### 3. Use VSCode on Codio Itself (Pretty Easily Done, if You Followed the Instructions in the First Lecture)
+### 3. Use VSCode on Codio Itself (Rating: Pretty Easily Done, if You Followed the Instructions in the First Lecture)
 
 Finally, VSCode may be used in a web browser on Codio itself. Assuming you have
 followed in the instructions in the first lecture, on getting everything setup
