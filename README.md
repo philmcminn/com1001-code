@@ -42,13 +42,15 @@ To clone the repository you will need to issue the following command:
 To run an example you'll need to change to the directory where it exists as a
 Ruby file. You'll need to ensure the appropriate gems are installed. Each
 directory contains a ``GemFile`` so it is easy for you to ensure this using
-[Bundler](https://bundler.io). Bundler is already installed on Codio (if you're
-using your own machine – which is _not recommended_ ([see here as to
-why](#4-if-you-dont-like-codio)), you'll need to install it), so you just need
-to issue a ``bundle install`` command in the terminal in the appropriate
-directory. Unless the file forms a part of an overall application, you should be
-able to run it by issuing a ``ruby ...`` command at the terminal (where the dots
-are the Ruby file name).
+[Bundler](https://bundler.io). Bundler is already installed on Codio, so you
+just need to issue a ``bundle install`` command in the terminal in the
+appropriate directory. If you're using your own machine, which is _not
+recommended_ (see here as to why](#4-if-you-dont-like-codio)), you'll need to
+install it first, if you haven't already. Unless the file forms a part of an
+overall application, you should be able to run it by issuing a ``ruby ...``
+command at the terminal (where the dots are the Ruby file name). It should be
+clear from the lectures and looking at the code itself which files are meant to
+be run and which ones are not.
 
 # 3. Which Code Examples are Discussed in Which Lectures?
 
