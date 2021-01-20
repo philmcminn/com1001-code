@@ -23,7 +23,6 @@ end
 #
 # 3) Do the decryption
 #
-
 # Set up the AES cipher and set it to decrypt mode
 aes = OpenSSL::Cipher.new('AES-128-CBC')                                   
 aes.decrypt                                                                

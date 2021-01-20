@@ -1,4 +1,4 @@
-require 'time_difference'
+require "time_difference"
 
 # A player record from the database
 class Player < Sequel::Model
@@ -7,7 +7,7 @@ class Player < Sequel::Model
   end
 
   def age(at_date = Date.today)
-    dob = Date.strptime(date_of_birth, '%Y-%m-%d')
+    dob = Date.strptime(date_of_birth, "%Y-%m-%d")
     TimeDifference.between(dob, at_date).in_years.floor
   end
 
@@ -20,13 +20,13 @@ class Player < Sequel::Model
   end
 
   def load(params)
-    self.first_name = params.fetch('first_name', '')
-    self.surname = params.fetch('surname', '')
-    self.gender = params.fetch('gender', '')
-    self.club = params.fetch('club', '')
-    self.country = params.fetch('country', '')
-    self.position = params.fetch('position', '')
-    self.date_of_birth = params.fetch('date_of_birth', '')
+    self.first_name = params.fetch("first_name", "")
+    self.surname = params.fetch("surname", "")
+    self.gender = params.fetch("gender", "")
+    self.club = params.fetch("club", "")
+    self.country = params.fetch("country", "")
+    self.position = params.fetch("position", "")
+    self.date_of_birth = params.fetch("date_of_birth", "")
   end
 
   def sanitize
@@ -41,13 +41,13 @@ class Player < Sequel::Model
 
   def validate
     errors = Set.new
-    errors << 'first_name' if first_name.empty?
-    errors << 'surname' if surname.empty?
-    errors << 'gender' if gender.empty?
-    errors << 'club' if club.empty?
-    errors << 'country' if country.empty?
-    errors << 'position' if position.empty?
-    errors << 'date_of_birth' unless Validation.str_is_valid_yyy_mm_dd_date?(date_of_birth)
+    errors << "first_name" if first_name.empty?
+    errors << "surname" if surname.empty?
+    errors << "gender" if gender.empty?
+    errors << "club" if club.empty?
+    errors << "country" if country.empty?
+    errors << "position" if position.empty?
+    errors << "date_of_birth" unless Validation.str_is_valid_yyy_mm_dd_date?(date_of_birth)
     errors
   end
 end
