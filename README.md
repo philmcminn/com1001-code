@@ -29,7 +29,7 @@ The preferred development platform for this module is
 [Codio](https://www.codio.com/), which you will have encountered in the Autumn
 Semester. The first lecture of the Spring will show you how to get everything
 setup. This lecture is available as a video on
-(Blackboard)[https://vle.shef.ac.uk].
+[Blackboard](https://vle.shef.ac.uk).
 
 ### Cloning the Repository
 
