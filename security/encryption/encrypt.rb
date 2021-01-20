@@ -5,7 +5,6 @@ require "openssl"
 # 1) Get the user to enter their information
 #
 users = DB[:users]
-data = {}
 
 puts "Please enter your username:"
 username = gets.chomp
