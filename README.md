@@ -98,7 +98,8 @@ tends to be relatively easy on Linux on Mac machines, Windows users typically
 encounter more problems. Also, do not forget your team members and your project
 who may prefer to use Codio, opening up various possibilities for
 incompatibilities and problems. Finally, remember that the team project will be
-marked using Codio – so everything needs to work there out of the box.
+marked using Codio. So everything needs to work on Codio, because the markers
+will not be debugging your code to get it to run.
 
 ### 2. SSH into Codio from Your Own Machine (Slightly More Endorsed, But Potentially Tricky to Setup)
 
