@@ -58,22 +58,22 @@ snippet of the example on the slide.
 If you're struggling to find the lecture in which an example appears, I've provided the
 table below to help you out:
 
-| Examples Directory  | Lecture(s)                                                                                    | Week |
-| ------------------- | ----------------------------------------------------------------------------------------------| ---- |
-| ``basics/``         | _An Introduction to Web Application Development – Sinatra Basics: Verbs, Routes, and Blocks_  | TBA  |
-| ``controllers/``    | _Web Application Architecture – The Model View Controller (MVC) Design Pattern_               | TBA  |
-| ``cookies/``        | _Cookies_                                                                                     | TBA  |
-| ``databases/``      | _Introduction to Relational Databases and SQL_                                                | TBA  |
-| ``debugging/``      | &bullet; _Yesterday My Program Worked. Today It Does Not! Why?_ <br /> &bullet; _These are Testing Times!_      | TBA <br/> TBA |
-| ``forms/``          | _Forms, GET and POST_                                                                         | TBA  |
-| ``models/``         | _Models in Sinatra_                                                                           | TBA  |
-| ``orm/``            | _Interacting with a Database Using Ruby: Object-Relational Mapping_                           | TBA  |
-| ``routes/``         | _Advanced Routes_                                                                             | TBA  |
-| ``ruby/``           | _Ruby Blocks_; and _Interacting with a Database using Ruby_ (see slides on Hashes)            | TBA  |
-| ``security/``       | _Security and Web Applications_                                                               | TBA  |
-| ``sessions/``       | _Sessions_                                                                                    | TBA  |
-| ``unit_testing/``   | _These are Testing Times!_                                                                    | TBA  |
-| ``views/``          | _The Web Application Front-End_                                                               | TBA  |
+| Examples Directory  | Lecture(s)                                                                                                 | Week          |
+| ------------------- | -----------------------------------------------------------------------------------------------------------| ------------- |
+| ``basics/``         | &bullet; _An Introduction to Web Application Development – Sinatra Basics: Verbs, Routes, and Blocks_      | TBA           |
+| ``controllers/``    | &bullet; _Web Application Architecture – The Model View Controller (MVC) Design Pattern_                   | TBA           |
+| ``cookies/``        | &bullet; _Cookies_                                                                                         | TBA           |
+| ``databases/``      | &bullet; _Introduction to Relational Databases and SQL_                                                    | TBA           |
+| ``debugging/``      | &bullet; _Yesterday My Program Worked. Today It Does Not! Why?_ <br /> &bullet; _These are Testing Times!_ | TBA <br/> TBA |
+| ``forms/``          | &bullet; _Forms, GET and POST_                                                                             | TBA           |
+| ``models/``         | &bullet; _Models in Sinatra_                                                                               | TBA           |
+| ``orm/``            | &bullet; _Interacting with a Database Using Ruby: Object-Relational Mapping_                               | TBA           |
+| ``routes/``         | &bullet; _Advanced Routes_                                                                                 | TBA           |
+| ``ruby/``           | &bullet; _Ruby Blocks_ <br /> &bullet; _Interacting with a Database using Ruby_ (see slides on Hashes)     | TBA <br/> TBA |
+| ``security/``       | &bullet; _Security and Web Applications_                                                                   | TBA           |
+| ``sessions/``       | &bullet; _Sessions_                                                                                        | TBA           |
+| ``unit_testing/``   | &bullet; _These are Testing Times!_                                                                        | TBA           |
+| ``views/``          | &bullet; _The Web Application Front-End_                                                                   | TBA           |
 
 # 4. If You Don't Like Codio...
 
