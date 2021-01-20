@@ -46,7 +46,7 @@ directory contains a ``GemFile`` so it is easy for you to ensure this using
 just need to issue a ``bundle install`` command in the terminal in the
 appropriate directory. If you're using your own machine, which is _not
 recommended_ ([see here as to
-why](1-develop-on-your-own-machine-not-recommended)), you'll need to install it
+why](#1-develop-on-your-own-machine-not-recommended)), you'll need to install it
 first, if you haven't already. Unless the file forms a part of an overall
 application, you should be able to run it by issuing a ``ruby ...`` command at
 the terminal (where the dots are the Ruby file name). It should be clear from
