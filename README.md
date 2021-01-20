@@ -64,7 +64,7 @@ table below to help you out:
 | ``controllers/``    | _Web Application Architecture – The Model View Controller (MVC) Design Pattern_               | TBA  |
 | ``cookies/``        | _Cookies_                                                                                     | TBA  |
 | ``databases/``      | _Introduction to Relational Databases and SQL_                                                | TBA  |
-| ``debugging/``      | _Yesterday My Program Worked. Today It Does Not! Why?_ <br /> _These are Testing Times!_      | TBA <br/> TBA |
+| ``debugging/``      | &bullet; _Yesterday My Program Worked. Today It Does Not! Why?_ <br /> &bullet; _These are Testing Times!_      | TBA <br/> TBA |
 | ``forms/``          | _Forms, GET and POST_                                                                         | TBA  |
 | ``models/``         | _Models in Sinatra_                                                                           | TBA  |
 | ``orm/``            | _Interacting with a Database Using Ruby: Object-Relational Mapping_                           | TBA  |
