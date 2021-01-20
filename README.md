@@ -45,13 +45,12 @@ directory contains a ``GemFile`` so it is easy for you to ensure this using
 [Bundler](https://bundler.io). Bundler is already installed on Codio, so you
 just need to issue a ``bundle install`` command in the terminal in the
 appropriate directory. If you're using your own machine, which is _not
-recommended_ ([see here as to
-why](#1-develop-on-your-own-machine-not-recommended)), you'll need to install it
-first, if you haven't already. Unless the file forms a part of an overall
-application, you should be able to run it by issuing a ``ruby ...`` command at
-the terminal (where the dots are the Ruby file name). It should be clear from
-the explanations in lectures and looking at the code itself which files are
-meant to be run and which ones are not.
+recommended_ ([see here as to why](#1-develop-on-your-own-machine)), you'll need
+to install it first, if you haven't already. Unless the file forms a part of an
+overall application, you should be able to run it by issuing a ``ruby ...``
+command at the terminal (where the dots are the Ruby file name). It should be
+clear from the explanations in lectures and looking at the code itself which
+files are meant to be run and which ones are not.
 
 # 3. Which Code Examples are Discussed in Which Lectures?
 
@@ -91,7 +90,7 @@ available to you, depending on your level of technical expertise:
 
 ### 1. Develop on Your Own Machine
 
-**Rating: Not Recommended**
+**Rating:** Not recommended
 
 First, you can develop everything on your own machine. However, this means you
 installing Ruby and getting everything working yourself – we are unable to
@@ -105,7 +104,7 @@ will not be debugging your code to get it to run.
 
 ### 2. SSH into Codio from Your Own Machine
 
-**Rating: Slightly More Endorsed, But Potentially Tricky to Setup**
+**Rating:** Slightly more endorsed, but potentially tricky to setup
 
 The second option may be more preferable – where you SSH into your Codio box
 from your text editor/IDE on your own machine. This gives you the best of both
@@ -119,7 +118,10 @@ using – here are some useful pointers for
 [VSCode](https://code.visualstudio.com), a popular text editor and IDE for many
 languages, as an example: https://code.visualstudio.com/docs/remote/ssh.
 
-### 3. Use VSCode on Codio Itself (Rating: Pretty Easily Done, if You Followed the Instructions in the First Lecture)
+### 3. Use VSCode on Codio Itself
+
+**Rating:** Pretty easy to do, especially if you followed the instructions in
+the first lecture
 
 Finally, VSCode may be used in a web browser on Codio itself. Assuming you have
 followed in the instructions in the first lecture, on getting everything setup
