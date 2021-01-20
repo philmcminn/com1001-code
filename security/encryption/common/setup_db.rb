@@ -2,7 +2,7 @@ require "logger"
 require "sequel"
 
 # Open the database
-DB = Sequel.sqlite("db.sqlite3", logger: Logger.new("db.log"))
+DB = Sequel.sqlite("temp.sqlite3", logger: Logger.new("db.log"))
 
 # Create the users table if it does not exist
 DB.create_table? :users do

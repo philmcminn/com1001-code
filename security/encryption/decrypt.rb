@@ -1,4 +1,4 @@
-require_relative "setup_db"
+require_relative "common/setup_db"
 require "openssl"
 
 #
