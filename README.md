@@ -60,20 +60,20 @@ table below to help you out:
 
 | Examples Directory  | Lecture(s)                                                                                    | Week |
 | ------------------- | ----------------------------------------------------------------------------------------------| ---- |
-| ``basics/``         | _An Introduction to Web Application Development – Sinatra Basics: Verbs, Routes, and Blocks_  | TBA  |
-| ``controllers/``    | _Web Application Architecture – The Model View Controller (MVC) Design Pattern_               | TBA  |
-| ``cookies/``        | _Cookies_                                                                                     | TBA  |
-| ``databases/``      | _Introduction to Relational Databases and SQL_                                                | TBA  |
-| ``debugging/``      | _Yesterday My Program Worked. Today It Does Not! Why?_ and _These are Testing Times!_         | TBA  |
-| ``forms/``          | _Forms, GET and POST_                                                                         | TBA  |
-| ``models/``         | _Models in Sinatra_                                                                           | TBA  |
-| ``orm/``            | _Interacting with a Database Using Ruby: Object-Relational Mapping_                           | TBA  |
-| ``routes/``         | _Advanced Routes_                                                                             | TBA  |
-| ``ruby/``           | _Ruby Blocks_ and _Interacting with a Database using Ruby_ (see slides on Hashes)             | TBA  |
-| ``security/``       | _Security and Web Applications_                                                               | TBA  |
-| ``sessions/``       | _Sessions_                                                                                    | TBA  |
-| ``unit_testing/``   | _These are Testing Times!_                                                                    | TBA  |
-| ``views/``          | _The Web Application Front-End_                                                               | TBA  |
+| ``basics/``         | *An Introduction to Web Application Development – Sinatra Basics: Verbs, Routes, and Blocks*  | TBA  |
+| ``controllers/``    | *Web Application Architecture – The Model View Controller (MVC) Design Pattern*               | TBA  |
+| ``cookies/``        | *Cookies*                                                                                     | TBA  |
+| ``databases/``      | *Introduction to Relational Databases and SQL*                                                | TBA  |
+| ``debugging/``      | *Yesterday My Program Worked. Today It Does Not! Why?* and *These are Testing Times!*         | TBA  |
+| ``forms/``          | *Forms, GET and POST*                                                                         | TBA  |
+| ``models/``         | *Models in Sinatra*                                                                           | TBA  |
+| ``orm/``            | *Interacting with a Database Using Ruby: Object-Relational Mapping*                           | TBA  |
+| ``routes/``         | *Advanced Routes*                                                                             | TBA  |
+| ``ruby/``           | *Ruby Blocks* and *Interacting with a Database using Ruby* (see slides on Hashes)             | TBA  |
+| ``security/``       | *Security and Web Applications*                                                               | TBA  |
+| ``sessions/``       | *Sessions*                                                                                    | TBA  |
+| ``unit_testing/``   | *These are Testing Times!*                                                                    | TBA  |
+| ``views/``          | *The Web Application Front-End*                                                               | TBA  |
 
 # 4. If You Don't Like Codio...
 
