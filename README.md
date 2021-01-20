@@ -61,9 +61,17 @@ table below to help you out:
 | Examples Directory  | Lecture(s)                                                                            | Week |
 | ------------------- | ------------------------------------------------------------------------------------- | ---- |
 | ``basics/``         | _An Introduction to Web Application Development_                                      | TBA  |
-| ``blocks/``         | _Ruby Blocks_                                                                         | TBA  |
 | ``controllers/``    | _Web Application Architecture_                                                        | TBA  |
-| ``debugging/``      | _Yesterday My Program Worked. Today It Does Not! Why?_ and _These are Testing Times!_ | TBA  |
+| ``cookies/``        | _Cookies_                                                                             | TBA  |
+| ``databases/``      | _Introduction to Relational Databases and SQL_                                        | TBA  |
+| ``debugging/``      | _Yesterday My Program Worked. Today It Does Not! Why?_, _These are Testing Times!_    | TBA  |
+| ``forms/``          | _Forms, GET and POST_                                                                 | TBA  |
+| ``models/``         | _Models in Sinatra_                                                                   | TBA  |
+| ``orm/``            | _Interacting with a Database Using Ruby_                                              | TBA  |
+| ``routes/``         | _Advanced Routes_                                                                     | TBA  |
+| ``ruby/``           | _Ruby Blocks_, _Interacting with a Database using Ruby_ (slides on Hashes)            | TBA  |
+| ``security/``       | _Security and Web Applications_                                                       | TBA  |
+| ``sessions/``       | _Sessions_                                                                            | TBA  |
 | ``unit_testing/``   | _These are Testing Times!_                                                            | TBA  |
 | ``views/``          | _The Web Application Front-End_                                                       | TBA  |
 
