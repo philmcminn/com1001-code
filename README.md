@@ -49,8 +49,8 @@ recommended_ (see here as to why](#4-if-you-dont-like-codio)), you'll need to
 install it first, if you haven't already. Unless the file forms a part of an
 overall application, you should be able to run it by issuing a ``ruby ...``
 command at the terminal (where the dots are the Ruby file name). It should be
-clear from the lectures and looking at the code itself which files are meant to
-be run and which ones are not.
+clear from the explanations in lectures and looking at the code itself which
+files are meant to be run and which ones are not.
 
 # 3. Which Code Examples are Discussed in Which Lectures?
 
