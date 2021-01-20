@@ -14,6 +14,6 @@ if num_rows.zero?
   puts "Sorry there are no players for that club."
 else
   dataset.each do |record|
-    puts "* #{record[:first_name]} #{record[:surname]}"
+    puts record
   end
 end
