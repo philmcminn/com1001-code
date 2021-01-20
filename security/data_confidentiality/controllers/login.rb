@@ -14,7 +14,7 @@ post '/login' do
 
   # sanitize
   username.strip!
-  password.strip! 
+  password.strip!
 
   # validate
   @username_error = username.empty? ? "Please enter a username" : nil

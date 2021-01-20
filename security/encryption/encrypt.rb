@@ -4,13 +4,13 @@ require "openssl"
 #
 # 1) Get the user to enter their information
 #
-users = DB[:users] 
+users = DB[:users]
 data = {}
 
 puts "Please enter your username:"
 username = gets.chomp
 
-unless users.where(:username => username).count.zero?
+unless users.where(username: username).count.zero?
   abort "Sorry, the username '#{username}' already exists - try another one."
 end
 

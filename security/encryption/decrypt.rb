@@ -13,39 +13,37 @@ password = gets.chomp
 #
 # 2) Get the user's record from the database
 #
-users = DB[:users] 
-user = users.where(:username => username).first
+users = DB[:users]
+user = users.where(username: username).first
 
-if user.nil?
-  abort "Unknown username '#{username}'."
-end
+abort "Unknown username '#{username}'." if user.nil?
 
 #
 # 3) Do the decryption
 #
 # Set up the AES cipher and set it to decrypt mode
-aes = OpenSSL::Cipher.new('AES-128-CBC')                                   
-aes.decrypt                                                                
+aes = OpenSSL::Cipher.new('AES-128-CBC')
+aes.decrypt
 
 # Get the initial vector
-aes.iv = user[:iv]                                                         
+aes.iv = user[:iv]
 
 # Derive a 16-byte key from the user's password. If the user's password is
 # correct, this will produce the correct key to decrypt the initial key.
-aes.key = OpenSSL::PKCS5.pbkdf2_hmac_sha1(password, user[:salt], 20000, 16) 
+aes.key = OpenSSL::PKCS5.pbkdf2_hmac_sha1(password, user[:salt], 20_000, 16)
 
-# Attempt to decrypt the key 
+# Attempt to decrypt the key
 begin
   aes.reset
-  aes.key = aes.update(user[:encrypted_key]) + aes.final                              
+  aes.key = aes.update(user[:encrypted_key]) + aes.final
 rescue OpenSSL::Cipher::CipherError
   puts "Incorrect password."
 else
   # Decrypt our user data
   aes.reset
-  address = aes.update(user[:encrypted_address]) + aes.final                                
+  address = aes.update(user[:encrypted_address]) + aes.final
   aes.reset
-  telephone_number = aes.update(user[:encrypted_telephone_number]) + aes.final                                
+  telephone_number = aes.update(user[:encrypted_telephone_number]) + aes.final
   puts "===================================="
   puts "The user name and password is OK."
   puts "The unencrypted data is as follows:"

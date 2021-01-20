@@ -3,7 +3,6 @@ require "logger"
 require "require_all"
 require "sequel"
 require "sinatra"
-require "sinatra/reloader"
 
 include ERB::Util
 

@@ -4,9 +4,6 @@ require "sequel"
 # set up DB
 DB = Sequel.sqlite("../databases/football_players.sqlite3")
 
-
-
-
 RSpec.describe Player do
   describe "#name" do
     it "returns the player's full name" do
