@@ -1,7 +1,7 @@
 require 'sinatra'
 set :bind, '0.0.0.0'
 
-get '/' do
+get '/buggy-route' do
   numerator = 5
   denominator = 0
   numerator / denominator

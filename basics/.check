@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 ../.reset_gems
 bundle install
-rspec buggy_route_spec.rb
-rspec hello_world_spec.rb
-rspec multiple_routes_spec.rb
-rspec puts_example_spec.rb
-rspec reloader_example_spec.rb
-rspec times_table_spec.rb
+rspec .
 rubocop

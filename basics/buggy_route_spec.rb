@@ -10,9 +10,9 @@ RSpec.describe "Buggy Route App" do
     Sinatra::Application
   end
 
-  describe "GET /" do
+  describe "GET /buggy-route" do
     it "Gives a 500 error" do
-      get "/"
+      get "/buggy-route"
       expect(last_response.status).to eq(500)
     end
   end

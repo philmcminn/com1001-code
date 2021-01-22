@@ -10,9 +10,9 @@ RSpec.describe "Puts Example App" do
     Sinatra::Application
   end
 
-  describe "GET /" do
+  describe "GET /puts-example" do
     it "loads correctly" do
-      get "/"
+      get "/puts-example"
       expect(last_response.status).to eq(200)
     end
   end

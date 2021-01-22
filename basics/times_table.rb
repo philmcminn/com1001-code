@@ -4,7 +4,7 @@ set :bind, "0.0.0.0"
 TIMES_TABLE = 3
 LIMIT = 10
 
-get "/" do
+get "/times-table" do
   title = "#{TIMES_TABLE} times table"
   output = "<html><head><title>#{title}</title></head>"
   output += "<body><h1>#{title}</h1><ul>"

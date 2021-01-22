@@ -10,9 +10,9 @@ RSpec.describe "Reloader Example App" do
     Sinatra::Application
   end
 
-  describe "GET /" do
+  describe "GET /reloader-example" do
     it "loads correctly" do
-      get "/"
+      get "/reloader-example"
       expect(last_response.status).to eq(200)
     end
   end
