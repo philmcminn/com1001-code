@@ -2,7 +2,6 @@ require: rubocop-rspec
 
 AllCops:
   NewCops: enable
-  SuggestExtensions: false
 
 RSpec/DescribeClass:
   Enabled: false  

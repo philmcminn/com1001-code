@@ -19,7 +19,6 @@ RSpec.describe "Football Players App" do
     context "with an empty database" do
       it "says the database is empty" do
         get "/list"
-        expect(last_response).to be_ok
         expect(last_response.body).to include("The database is empty!")
       end
     end
@@ -29,7 +28,6 @@ RSpec.describe "Football Players App" do
         player = Player.new(first_name: "Test", surname: "Player", date_of_birth: "2020-1-1")
         player.save
         get "/list"
-        expect(last_response).to be_ok
         expect(last_response.body).to include("Test Player")
       end
     end
