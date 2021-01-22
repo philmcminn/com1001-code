@@ -11,9 +11,13 @@ RSpec.describe "Hello World App" do
   end
 
   describe "GET /hello-world" do
-    it "says 'Hello, World!'" do
-      get "/hello-world"
+    get "/hello-world"
+
+    it "has a status code of 200 (OK)" do
       expect(last_response.status).to eq(200)
+    end
+
+    it "says 'Hello, World!'" do
       expect(last_response.body).to eq("Hello, World!")
     end
   end

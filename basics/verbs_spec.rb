@@ -13,7 +13,6 @@ RSpec.describe "Verbs App" do
   describe "GET /get-route" do
     it "Says 'accessed by GET'" do
       get "/get-route"
-      expect(last_response).to be_ok
       expect(last_response.body).to include("accessed by GET")
     end
   end
@@ -21,7 +20,6 @@ RSpec.describe "Verbs App" do
   describe "POST /post-route" do
     it "Says 'accessed by POST'" do
       post "/post-route"
-      expect(last_response).to be_ok
       expect(last_response.body).to include("accessed by POST")
     end
   end

@@ -1,5 +1,10 @@
+require: rubocop-rspec
+
 AllCops:
   NewCops: enable
+
+RSpec/DescribeClass:
+  Enabled: false  
 
 Style/FrozenStringLiteralComment:
   Enabled: false
