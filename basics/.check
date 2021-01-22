@@ -7,4 +7,4 @@ rspec multiple_routes_spec.rb
 rspec puts_example_spec.rb
 rspec reloader_example_spec.rb
 rspec times_table_spec.rb
-rubocop .
+rubocop
