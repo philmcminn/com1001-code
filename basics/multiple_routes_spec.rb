@@ -11,25 +11,25 @@ RSpec.describe "Multiple Routes App" do
   end
 
   describe "GET /first-route" do
-    get "/first-route"
-
-    it "loads ok" do
+    it "has a status code of 200 (OK)" do
+      get "/first-route"
       expect(last_response).to be_ok
     end
 
     it "outputs the correct message for first-route" do
+      get "/first-route"
       expect(last_response.body).to eq("This code is run when first-route is invoked")
     end
   end
 
   describe "GET /second-route" do
-    get "/second-route"
-
-    it "loads ok" do
+    it "has a status code of 200 (OK)" do
+      get "/second-route"
       expect(last_response).to be_ok
     end
 
     it "outputs the correct message for second-route" do
+      get "/second-route"
       expect(last_response.body).to eq("This code is run when second-route is invoked")
     end
   end
