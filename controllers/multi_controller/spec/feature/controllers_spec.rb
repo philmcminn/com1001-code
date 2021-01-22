@@ -11,29 +11,29 @@ RSpec.describe "Multi Controller App" do
   end
 
   describe "GET /" do
-    it "loads a page" do
+    it "has a status code of 200 (OK)" do
       get "/"
       expect(last_response.status).to eq(200)
     end
   end
 
   describe "GET /list-products" do
-    it "loads a page" do
-      get "/"
+    it "has a status code of 200 (OK)" do
+      get "/list-products"
       expect(last_response.status).to eq(200)
     end
   end
 
   describe "GET /admin/login" do
-    it "loads a page" do
-      get "/"
+    it "has a status code of 200 (OK)" do
+      get "/admin/login"
       expect(last_response.status).to eq(200)
     end
   end
 
-  describe "GET /admin/login" do
-    it "loads a page" do
-      get "/"
+  describe "GET /admin/logout" do
+    it "has a status code of 200 (OK)" do
+      get "/admin/logout"
       expect(last_response.status).to eq(200)
     end
   end
