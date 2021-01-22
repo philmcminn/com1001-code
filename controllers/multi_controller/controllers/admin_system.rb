@@ -1,7 +1,7 @@
-get '/admin/login' do
+get "/admin/login" do
   # ...
 end
 
-get '/admin/logout' do
+get "/admin/logout" do
   # ...
 end

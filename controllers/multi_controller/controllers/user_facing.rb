@@ -1,7 +1,7 @@
-get '/' do
+get "/" do
   # ...
 end
 
-get '/list-products' do
+get "/list-products" do
   # ...
 end
