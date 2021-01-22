@@ -2,4 +2,5 @@ source "https://rubygems.org" do
   gem "rspec"
   gem "sequel"
   gem "sqlite3"
+  gem "time_difference"
 end
