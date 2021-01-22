@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+sudo gem uninstall --all --force --executables
+sudo gem install bundler
