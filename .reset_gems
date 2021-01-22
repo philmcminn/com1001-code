@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 sudo gem uninstall --all --force --executables
 sudo gem install bundler
+sudo gem install rubocop
+sudo gem install rubocop-rspec
+sudo gem install rubocop-sequel
