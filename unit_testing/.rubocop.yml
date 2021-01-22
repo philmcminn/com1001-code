@@ -1,8 +1,13 @@
+require: rubocop-rspec
+
 AllCops:
   NewCops: enable
 
 Metrics/BlockLength:
   IgnoredMethods: ["describe", "context"]
+
+RSpec/MissingExampleGroupArgument:
+  Enabled: false
 
 Style/FrozenStringLiteralComment:
   Enabled: false

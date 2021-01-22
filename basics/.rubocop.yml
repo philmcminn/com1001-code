@@ -4,7 +4,7 @@ AllCops:
   NewCops: enable
 
 RSpec/DescribeClass:
-  Enabled: false  
+  Enabled: false
 
 Style/FrozenStringLiteralComment:
   Enabled: false
