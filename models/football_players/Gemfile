@@ -1,0 +1,13 @@
+source "https://rubygems.org" do
+  gem "rack-test"
+  gem "require_all"
+  gem "rspec"
+  gem "rubocop"
+  gem "rubocop-rspec"
+  gem "rubocop-sequel"
+  gem "sequel"
+  gem "sinatra"
+  gem "sqlite3"
+  gem "thin"
+  gem "time_difference"
+end

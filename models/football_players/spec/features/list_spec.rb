@@ -1,7 +1,7 @@
 require "rspec"
 require "rack/test"
 
-ENV['APP_ENV'] = "test"
+ENV["APP_ENV"] = "test"
 require_relative "../../app"
 
 RSpec.describe "Football Players App" do
