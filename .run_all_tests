@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-./.codio_reset_gems
-cd basics
-bundle install
-./.run_tests
