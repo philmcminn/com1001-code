@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 ../../.reset_gems
 bundle install
-rspec spec/features
-rspec spec/unit
+rspec 
 rubocop
