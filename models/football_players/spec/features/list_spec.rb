@@ -15,6 +15,10 @@ RSpec.describe "Football Players App" do
     DB.from("players").delete
   end
 
+  after(:all) do
+    DB.from("players").delete
+  end
+
   describe "GET /list" do
     context "with an empty database" do
       it "says the database is empty" do
