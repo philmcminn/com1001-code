@@ -16,11 +16,11 @@
       </tr>
     <% @players.each do |player| %>
       <tr>
-        <td><%= player.name %></td>
-        <td><%= player.club %></td>
-        <td><%= player.country %></td>
-        <td><%= player.position %></td>
-        <td><%= player.age %></td>
+        <td><%=h player.name %></td>
+        <td><%=h player.club %></td>
+        <td><%=h player.country %></td>
+        <td><%=h player.position %></td>
+        <td><%=h player.age %></td>
       </tr>
     <% end %> 
     </table>
