@@ -11,11 +11,11 @@ RSpec.describe "Football Players App" do
     Sinatra::Application
   end
 
-  before do
+  before(:all) do
     DB.from("players").delete
   end
 
-  after(:all) do
+  after do
     DB.from("players").delete
   end
 
@@ -30,7 +30,7 @@ RSpec.describe "Football Players App" do
     context "with one record in the database" do
       it "lists the player" do
         player = Player.new(first_name: "Test", surname: "Player", date_of_birth: "2020-1-1")
-        player.save
+        player.save_changes
         get "/list"
         expect(last_response.body).to include("Test Player")
       end

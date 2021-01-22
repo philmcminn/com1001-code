@@ -12,11 +12,11 @@ player.surname = "Rashford"
 player.club = "Manchester United"
 
 # Save to the database
-player.save
+player.save_changes
 
 # Update his club and save again
 player.club = "Manchester City"
-player.save
+player.save_changes
 
 # Now delete
 player.delete

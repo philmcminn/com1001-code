@@ -1,8 +1,16 @@
-require: rubocop-rspec
+require:
+  - rubocop-rspec
+  - rubocop-sequel
 
 AllCops:
   NewCops: enable
 
+Metrics/BlockLength:
+  IgnoredMethods: ["describe", "context"]
+
+RSpec/BeforeAfterAll:
+  Enabled: false
+  
 RSpec/DescribeClass:
   Enabled: false
 
