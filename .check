@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+./.reset_gems
+cd $1
+bundle install
+rspec .
+rubocop
