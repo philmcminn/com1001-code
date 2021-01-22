@@ -2,7 +2,7 @@ require "rspec"
 require "sequel"
 
 # set up DB
-DB = Sequel.sqlite(File.dirname(__FILE__) + "/../../db/test.sqlite3")
+DB = Sequel.sqlite("#{File.dirname(__FILE__)}/../../db/test.sqlite3")
 
 require_relative "../../models/player"
 
