@@ -1,9 +1,0 @@
-source "https://rubygems.org" do
-  gem "rack-test"
-  gem "require-all"
-  gem "rspec"
-  gem "sequel"
-  gem "sinatra"
-  gem "sqlite3"
-  gem "time_difference"
-end

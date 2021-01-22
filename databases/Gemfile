@@ -1,5 +1,0 @@
-source "https://rubygems.org" do
-  gem "logger"
-  gem "sequel"
-  gem "sqlite3"
-end
