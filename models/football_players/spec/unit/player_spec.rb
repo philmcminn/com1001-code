@@ -2,7 +2,7 @@ require "rspec"
 require "sequel"
 
 # set up DB
-DB = Sequel.sqlite("../databases/football_players.sqlite3")
+DB = Sequel.sqlite("../../db/test.sqlite3")
 
 RSpec.describe Player do
   describe "#name" do
