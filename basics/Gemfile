@@ -1,4 +1,5 @@
 source "https://rubygems.org" do
+  gem "rack-test"
   gem "rspec"
   gem "sinatra"
   gem "sinatra-contrib"    
