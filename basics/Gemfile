@@ -1,7 +1,8 @@
 source "https://rubygems.org" do
   gem "rack-test"
   gem "rspec"
+  gem "rubocop"
   gem "sinatra"
-  gem "sinatra-contrib"    
+  gem "sinatra-contrib"
   gem "thin"
 end
