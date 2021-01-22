@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-../.codio_reset_gems
+../.reset_gems
 bundle install
 rspec buggy_route_spec.rb
 rspec hello_world_spec.rb
