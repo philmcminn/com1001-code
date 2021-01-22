@@ -11,9 +11,14 @@ RSpec.describe "Times Table App" do
   end
 
   describe "GET /times-table" do
-    it "Says 3 Times Table" do
+    it "Says '1 times 3 = 3'" do
       get "/times-table"
       expect(last_response.body).to include("1 times 3 = 3")
+    end
+
+    it "Says '2 times 3 = 6'" do
+      get "/times-table"
+      expect(last_response.body).to include("2 times 3 = 6")
     end
   end
 end
