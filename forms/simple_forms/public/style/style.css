@@ -1,5 +1,6 @@
 body {
     font-family: sans-serif;
+    background-color: lightgray;
 }
 
 .success {
@@ -9,5 +10,3 @@ body {
 .error {
     color: red;
 }
-
-input 

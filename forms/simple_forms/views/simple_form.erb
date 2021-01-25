@@ -1,16 +1,10 @@
 <html>
   <head>
-    <title>Form Submission Example</title>
+    <title>Simple Form Example</title>
     <link rel="stylesheet" href="style/style.css">    
   </head>
   <body>
-    <% unless @submitted_text_field_value.nil? %>
-    <p>You submitted the text: <%= @submitted_text_field_value %></p>
-    <% end %>
-
-    <!-- we will omit the "action" field in future examples when 
-    it's the same as the page with the form and hence not needed -->
-    <form action="/simple-form"> 
+    <form method="get" action="/process-simple-form"> 
       <p>
         Add some text into this box and press "submit": 
         <input type="text" name="text_field" size="50" />

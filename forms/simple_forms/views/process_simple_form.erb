@@ -1,0 +1,11 @@
+<html>
+  <head>
+    <title>Form Submission Example</title>
+    <link rel="stylesheet" href="style/style.css">    
+  </head>
+  <body>
+    <% unless @submitted_text_field_value.nil? %>
+    <p>You submitted the text: <%= @submitted_text_field_value %></p>
+    <% end %>
+  </body>
+</html>

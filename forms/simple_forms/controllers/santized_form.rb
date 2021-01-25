@@ -16,9 +16,7 @@ get "/sanitized-form" do
     # now proceed to validation
     @field1_error = "Please enter a value" if @field1.empty?
     @field2_error = "Please enter a value" if @field2.empty?
-    unless @field1_error.nil? && @field2_error.nil?
-      @submission_error = "Please correct the errors below" 
-    end
+    @submission_error = "Please correct the errors below" unless @field1_error.nil? && @field2_error.nil?
   end
 
   erb :validated_form
