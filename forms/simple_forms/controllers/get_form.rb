@@ -1,8 +1,8 @@
-get "/post-form" do
-  erb :post_form
+get "/get-form" do
+  erb :get_form
 end
 
-post "/process-post-form" do
+get "/process-get-form" do
   @submitted_text_field_value = params["text_field"]
   erb :escaped_form_submission
 end

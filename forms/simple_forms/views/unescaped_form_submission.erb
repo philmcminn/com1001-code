@@ -1,11 +1,13 @@
 <html>
   <head>
-    <title>Form Submission Example</title>
+    <title>Unescaped Form Submission Result</title>
     <link rel="stylesheet" href="style/style.css">    
   </head>
   <body>
     <% unless @submitted_text_field_value.nil? %>
-    <p>You submitted the text: <%= h @submitted_text_field_value %></p>
+      <p>You submitted the text:<strong>
+      <%= @submitted_text_field_value %>
+      </strong></p>
     <% end %>
   </body>
 </html>
