@@ -5,9 +5,7 @@
   </head>
   <body>
     <% unless @submitted_text_field_value.nil? %>
-    <p>You submitted the text: <%= @submitted_text_field_value %></p>
+    <p>You submitted the text: <%= h @submitted_text_field_value %></p>
     <% end %>
   </body>
 </html>
-
-DCC6DF
