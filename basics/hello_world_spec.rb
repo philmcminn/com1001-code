@@ -3,7 +3,7 @@ require "rack/test"
 
 require_relative "hello_world"
 
-RSpec.describe "Hello World App" do
+RSpec.describe "Hello World Sinatra Example" do
   include Rack::Test::Methods
 
   def app

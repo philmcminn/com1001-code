@@ -3,7 +3,7 @@ require "rack/test"
 
 require_relative "puts_example"
 
-RSpec.describe "Puts Example App" do
+RSpec.describe "Puts Example Sinatra Example" do
   include Rack::Test::Methods
 
   def app

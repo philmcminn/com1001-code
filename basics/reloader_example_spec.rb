@@ -3,7 +3,7 @@ require "rack/test"
 
 require_relative "reloader_example"
 
-RSpec.describe "Reloader Example App" do
+RSpec.describe "Reloader Example Sinatra Example" do
   include Rack::Test::Methods
 
   def app

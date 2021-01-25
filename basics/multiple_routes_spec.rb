@@ -3,7 +3,7 @@ require "rack/test"
 
 require_relative "multiple_routes"
 
-RSpec.describe "Multiple Routes App" do
+RSpec.describe "Multiple Routes Sinatra Example" do
   include Rack::Test::Methods
 
   def app

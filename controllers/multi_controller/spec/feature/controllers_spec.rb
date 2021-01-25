@@ -3,7 +3,7 @@ require "rack/test"
 
 require_relative '../../app'
 
-RSpec.describe "Multi Controller App" do
+RSpec.describe "Multi Controller Sinatra Example" do
   include Rack::Test::Methods
 
   def app

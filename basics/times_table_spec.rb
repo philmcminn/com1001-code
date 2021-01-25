@@ -3,7 +3,7 @@ require "rack/test"
 
 require_relative "times_table"
 
-RSpec.describe "Times Table App" do
+RSpec.describe "Times Table Sinatra Example" do
   include Rack::Test::Methods
 
   def app

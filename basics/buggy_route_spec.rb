@@ -3,7 +3,7 @@ require "rack/test"
 
 require_relative "buggy_route"
 
-RSpec.describe "Buggy Route App" do
+RSpec.describe "Buggy Route Sinatra Example" do
   include Rack::Test::Methods
 
   def app

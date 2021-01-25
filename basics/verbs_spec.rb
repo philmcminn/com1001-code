@@ -3,7 +3,7 @@ require "rack/test"
 
 require_relative "verbs"
 
-RSpec.describe "Verbs App" do
+RSpec.describe "Verbs Sinatra Example" do
   include Rack::Test::Methods
 
   def app
