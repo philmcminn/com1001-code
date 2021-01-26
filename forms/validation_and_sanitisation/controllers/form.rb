@@ -9,7 +9,7 @@ get "/form" do
   @field2_error = nil
 
   if @form_was_submitted
-    # sanitize the values by removing whitespace
+    # sanitise the values by removing whitespace
     @field1.strip!
     @field2.strip!
 

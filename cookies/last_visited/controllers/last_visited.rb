@@ -1,26 +1,23 @@
-LAST_VISITED_PERSISTENT_COOKIE = "last_visited_persistent"
-NUM_VISITS_PERSISTENT_COOKIE = "num_visits_persistent"
-NUM_VISITS_SESSION_COOKIE = "num_visits_session"
 ONE_DAY_IN_MILLISECONDS = 1000 * 60 * 60 * 24
 
 get "/" do
   # read persistent cookies
-  last_visited_persistent = request.cookies[LAST_VISITED_PERSISTENT_COOKIE]
-  num_visits_persistent = request.cookies.fetch(NUM_VISITS_PERSISTENT_COOKIE, 0).to_i
+  last_visited_persistent = request.cookies["last_visited_persistent"]
+  num_visits_persistent = request.cookies.fetch("num_visits_persistent", 0).to_i
 
   # read session cookies
-  num_visits_session = request.cookies.fetch(NUM_VISITS_SESSION_COOKIE, 0).to_i
+  num_visits_session = request.cookies.fetch("num_visits_session", 0).to_i
 
   # set persistent cookies
-  response.set_cookie(LAST_VISITED_PERSISTENT_COOKIE,
+  response.set_cookie("last_visited_persistent",
                       { value: Time.now,
                         expires: Time.now + ONE_DAY_IN_MILLISECONDS })
-  response.set_cookie(NUM_VISITS_PERSISTENT_COOKIE,
+  response.set_cookie("num_visits_persistent",
                       { value: num_visits_persistent + 1,
                         expires: Time.now + ONE_DAY_IN_MILLISECONDS })
 
   # set session cookies
-  response.set_cookie(NUM_VISITS_SESSION_COOKIE, num_visits_session + 1)
+  response.set_cookie("num_visits_session", num_visits_session + 1)
 
   # convert the cookie values into friendlier formatted strings
   # that can be displayed in the view
@@ -39,8 +36,8 @@ get "/" do
 end
 
 get "/delete" do
-  response.delete_cookie(LAST_VISITED_PERSISTENT_COOKIE)
-  response.delete_cookie(NUM_VISITS_PERSISTENT_COOKIE)
-  response.delete_cookie(NUM_VISITS_SESSION_COOKIE)
+  response.delete_cookie("last_visited_persistent")
+  response.delete_cookie("num_visits_persistent")
+  response.delete_cookie("num_visits_session")
   erb :delete
 end
