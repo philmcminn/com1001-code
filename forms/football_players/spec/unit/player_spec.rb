@@ -1,8 +1,10 @@
 require "rspec"
-require "sequel"
 
 # set up DB
-DB = Sequel.sqlite("db/test.sqlite3")
+ENV["APP_ENV"] = "test"
+require_relative("../../db/db")
+
+# load in the model
 require_relative "../../models/player"
 
 RSpec.describe Player do

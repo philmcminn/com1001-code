@@ -1,0 +1,20 @@
+AllCops:
+  NewCops: enable
+
+Metrics/AbcSize:
+  IgnoredMethods: ["load", "validate"]
+
+Metrics/CyclomaticComplexity:
+  IgnoredMethods: ["load", "validate"]
+
+Metrics/PerceivedComplexity:
+  IgnoredMethods: ["load", "validate"]
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/MixinUsage:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false

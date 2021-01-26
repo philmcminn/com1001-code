@@ -20,34 +20,24 @@ class Player < Sequel::Model
   end
 
   def load(params)
-    self.first_name = params.fetch("first_name", "")
-    self.surname = params.fetch("surname", "")
-    self.gender = params.fetch("gender", "")
-    self.club = params.fetch("club", "")
-    self.country = params.fetch("country", "")
-    self.position = params.fetch("position", "")
-    self.date_of_birth = params.fetch("date_of_birth", "")
-  end
-
-  def sanitize
-    first_name.strip!
-    surname.strip!
-    gender.strip!
-    club.strip!
-    country.strip!
-    position.strip!
-    date_of_birth.strip!
+    self.first_name = params.fetch("first_name", "").strip
+    self.surname = params.fetch("surname", "").strip
+    self.gender = params.fetch("gender", "").strip
+    self.club = params.fetch("club", "").strip
+    self.country = params.fetch("country", "").strip
+    self.position = params.fetch("position", "").strip
+    self.date_of_birth = params.fetch("date_of_birth", "").strip
   end
 
   def validate
-    errors = Set.new
-    errors << "first_name" if first_name.empty?
-    errors << "surname" if surname.empty?
-    errors << "gender" if gender.empty?
-    errors << "club" if club.empty?
-    errors << "country" if country.empty?
-    errors << "position" if position.empty?
-    errors << "date_of_birth" unless Validation.str_is_valid_yyy_mm_dd_date?(date_of_birth)
-    errors
+    super
+    errors.add("first_name", "cannot be empty") if first_name.empty?
+    errors.add("surname", "cannot be empty") if surname.empty?
+    errors.add("gender", "cannot be empty") if gender.empty?
+    errors.add("club", "cannot be empty") if club.empty?
+    errors.add("country", "cannot be empty") if country.empty?
+    errors.add("position", "cannot be empty") if position.empty?
+    errors.add("date_of_birth", "cannot be empty") if date_of_birth.empty?
+    errors.add("date_of_birth", "is invalid") unless Validation.str_is_valid_yyy_mm_dd_date?(date_of_birth)
   end
 end

@@ -19,10 +19,8 @@ end
 post "/add" do
   @player = Player.new
   @player.load(params)
-  @player.sanitize
-  @errors = @player.validate
 
-  if @errors.size.zero?
+  if @player.valid?
     @player.save
     redirect "/search"
   end
@@ -43,10 +41,8 @@ post "/edit" do
   if Player.id_exists?(id)
     @player = Player[id]
     @player.load(params)
-    @player.sanitize
-    @errors = @player.validate
 
-    if @errors.size.zero?
+    if @player.valid?
       @player.save_changes
       redirect "/search"
     end
