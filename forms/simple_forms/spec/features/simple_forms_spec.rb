@@ -1,7 +1,4 @@
 require "capybara/rspec"
-require "rack/test"
-require "rspec"
-
 require_relative "../../app"
 
 Capybara.app = Sinatra::Application
@@ -9,7 +6,7 @@ Capybara.app = Sinatra::Application
 RSpec.describe "Simple Form Examples" do
   include Capybara::DSL
 
-  describe "Simple Form Example" do    
+  describe "Simple Form Example" do
     it "submits some data" do
       visit "/simple-form"
       fill_in "text_field", with: "Some Text"
@@ -18,7 +15,7 @@ RSpec.describe "Simple Form Examples" do
     end
   end
 
-  describe "Get Form Example" do    
+  describe "Get Form Example" do
     it "submits some data" do
       visit "/get-form"
       fill_in "text_field", with: "Some Text"
@@ -27,7 +24,7 @@ RSpec.describe "Simple Form Examples" do
     end
   end
 
-  describe "Post Form Example" do    
+  describe "Post Form Example" do
     it "submits some data" do
       visit "/post-form"
       fill_in "text_field", with: "Some Text"

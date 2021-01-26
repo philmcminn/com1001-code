@@ -15,13 +15,13 @@
       <p>
         Field1: <input type="text" name="field1" value="<%= @field1 %>" />
         <% if @field1_error %>
-          <br /><strong class="error">Please enter a value</strong>
+          <br /><strong class="error"><%= @field1_error %></strong>
         <% end %>
       </p>
       <p>
         Field2: <input type="text" name="field2" value="<%= @field2 %>" />
         <% if @field2_error %>
-          <br /><strong class="error">Please enter a value</strong>
+          <br /><strong class="error"><%= @field2_error %></strong>
         <% end %>
       </p>
       <p><input type="submit" value="Submit"></p>

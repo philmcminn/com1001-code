@@ -6,6 +6,9 @@ AllCops:
 RSpec/DescribeClass:
   Enabled: false
 
+RSpec/MultipleExpectations:
+  Enabled: false
+  
 Style/FrozenStringLiteralComment:
   Enabled: false
 

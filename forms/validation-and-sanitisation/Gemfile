@@ -1,5 +1,7 @@
 source "https://rubygems.org" do
+  gem "capybara"
   gem "rack-test"
+  gem "require_all"
   gem "rspec"
   gem "sinatra"
   gem "thin"
