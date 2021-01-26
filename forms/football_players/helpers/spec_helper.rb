@@ -6,7 +6,7 @@ require "simplecov"
 SimpleCov.start do
   add_filter "/spec/"
 end
-SimpleCov.coverage_dir "spec/coverage"
+SimpleCov.coverage_dir "coverage"
 
 # load the app
 require_relative "../app"
