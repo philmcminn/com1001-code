@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Form Submission Example</title>
+    <link rel="stylesheet" href="style/style.css">    
+  </head>
+  <body>
+    <% if @form_was_submitted %>
+      <% if @submission_error %>
+        <p><strong class="error">Please correct the errors below</strong></p>
+      <% else %>
+        <p><strong class="success">Success!</strong></p>        
+      <% end %>
+    <% end %>
+    <form>
+      <p>
+        Field1: <input type="text" name="field1" value="<%= @field1 %>" />
+        <% if @field1_error %>
+          <br /><strong class="error">Please enter a value</strong>
+        <% end %>
+      </p>
+      <p>
+        Field2: <input type="text" name="field2" value="<%= @field2 %>" />
+        <% if @field2_error %>
+          <br /><strong class="error">Please enter a value</strong>
+        <% end %>
+      </p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+  </body>
+</html>

@@ -11,11 +11,3 @@ form p:first-child input {
 form p:last-child input {
     margin-top: -15px;
 }
-
-.success {
-    color: green;
-}
-
-.error {
-    color: red;
-}
