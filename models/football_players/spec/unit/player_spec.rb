@@ -1,11 +1,4 @@
-require "rspec"
-
-# set up DB
-ENV["APP_ENV"] = "test"
-require_relative("../../db/db")
-
-# load in the model
-require_relative "../../models/player"
+require_relative "../../helpers/spec_helper"
 
 RSpec.describe Player do
   describe "#name" do

@@ -1,16 +1,6 @@
-require "rack/test"
-require "rspec"
-
-ENV["APP_ENV"] = "test"
-require_relative "../../app"
+require_relative "../../helpers/spec_helper"
 
 RSpec.describe "Football Players App" do
-  include Rack::Test::Methods
-
-  def app
-    Sinatra::Application
-  end
-
   before(:all) do
     DB.from("players").delete
   end

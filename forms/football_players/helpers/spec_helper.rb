@@ -1,6 +1,5 @@
-# set up DB
+# Ensure we use the test database
 ENV["APP_ENV"] = "test"
-require_relative("../db/db")
 
 # Configure coverage logging
 require "simplecov"
