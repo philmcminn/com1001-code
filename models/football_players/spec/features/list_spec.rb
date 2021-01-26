@@ -1,5 +1,5 @@
-require "rspec"
 require "rack/test"
+require "rspec"
 
 ENV["APP_ENV"] = "test"
 require_relative "../../app"
