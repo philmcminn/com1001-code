@@ -1,4 +1,4 @@
-ONE_DAY_IN_MILLISECONDS = 1000 * 60 * 60 * 24
+ONE_DAY_IN_SECONDS = 60 * 60 * 24
 
 get "/" do
   # read persistent cookies
@@ -11,10 +11,10 @@ get "/" do
   # set persistent cookies
   response.set_cookie("last_visited_persistent",
                       { value: Time.now,
-                        expires: Time.now + ONE_DAY_IN_MILLISECONDS })
+                        expires: Time.now + ONE_DAY_IN_SECONDS })
   response.set_cookie("num_visits_persistent",
                       { value: num_visits_persistent + 1,
-                        expires: Time.now + ONE_DAY_IN_MILLISECONDS })
+                        expires: Time.now + ONE_DAY_IN_SECONDS })
 
   # set session cookies
   response.set_cookie("num_visits_session", num_visits_session + 1)
