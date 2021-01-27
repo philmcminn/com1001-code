@@ -8,29 +8,19 @@ get "/login" do
 end
 
 post '/login' do
-  # load
-  username = params.fetch("username", "")
-  password = params.fetch("password", "")
+  @user = User.new
+  @user.load(params)
+  @error = nil
 
-  # sanitize
-  username.strip!
-  password.strip!
-
-  # validate
-  @username_error = username.empty? ? "Please enter a username" : nil
-  @password_error = password.empty? ? "Please enter a password" : nil
-  @submission_error = nil
-
-  if @username_error.nil? && @password_error.nil?
-    user = User.first(username: username)
-    if !user.nil? && user.password_match?(password)
+  if @user.valid?
+    if @user.exist?
       session[:logged_in] = true
       redirect "/"
     else
-      @submission_error = "Username/Password combination incorrect"
+      @error = "Username/Password combination incorrect"
     end
   else
-    @submission_error = "Please complete the missing information:"
+    @error = "Please correct the information below"
   end
 
   erb :login

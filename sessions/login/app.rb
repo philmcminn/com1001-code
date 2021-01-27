@@ -10,7 +10,7 @@ set :bind, '0.0.0.0'
 enable :sessions
 
 # Database
-DB = Sequel.sqlite("db/#{ENV.fetch('APP_ENV', 'production')}.sqlite3")
+require_relative "db/db"
 
 # App
 require_all "models"

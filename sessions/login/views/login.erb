@@ -4,25 +4,23 @@
 
 <form method="post" action="/login">
 
-<% unless @submission_error.nil? %>
-<p><strong class="error"><%= @submission_error %></strong></p>
+<% unless @error.nil? %>
+<p><strong class="error"><%= @error %></strong></p>
 <% end %>
 
-<p>
-    Username: <br />
-    <input type="text" name="username" value="<%= @username %>"/>
-    <% unless @username_error.nil? %>
-    <br /><strong class="error"><%= @username_error %></strong>
-    <% end %>
-</p>
+<p>Username: <br /><input type="text" name="username" value="<%= @user.username %>"/></p>
+<% if @user.errors.include?("username") %>
+  <% @user.errors["username"].each do |error| %>
+    <p class="error"><strong>Username <%= error %></strong></p>
+  <% end %>
+<% end %>
 
-<p>
-    Password: <br />
-    <input type="password" name="password" />
-    <% unless @password_error.nil? %>
-    <br /><strong class="error"><%= @password_error %></strong>
-    <% end %>
-</p>
+<p>Password: <br /><input type="password" name="password" /></p>
+<% if @user.errors.include?("password") %>
+  <% @user.errors["password"].each do |error| %>
+    <p class="error"><strong>Password <%= error %></strong></p>
+  <% end %>
+<% end %>
 
 <p><input type="submit" value="Submit"></p>
 
