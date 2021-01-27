@@ -4,6 +4,7 @@ get "/" do
 end
 
 get "/login" do
+  @user = User.new
   erb :login
 end
 
