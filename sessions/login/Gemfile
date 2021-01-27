@@ -1,0 +1,8 @@
+source "https://rubygems.org" do
+  gem "require_all"
+  gem "sequel"
+  gem "sinatra"
+  gem "sqlite3"
+  gem "thin"
+  gem "time_difference"
+end

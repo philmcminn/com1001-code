@@ -35,7 +35,6 @@ end
 get "/edit" do
   id = params["id"]
   @player = Player[id] if Player.id_exists?(id)
-  @errors = Set.new
   erb :edit
 end
 

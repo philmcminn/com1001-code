@@ -2,7 +2,6 @@
 require "require_all"
 require "sequel"
 require "sinatra"
-require "sinatra/reloader"
 
 # For Codio
 set :bind, '0.0.0.0'
@@ -11,7 +10,7 @@ set :bind, '0.0.0.0'
 enable :sessions
 
 # Database
-DB = Sequel.sqlite("db/#{ENV.fetch('APP_ENV', 'production')}.sqlite3")
+require_relative "db/db"
 
 # App
 require_all "models"
