@@ -6,7 +6,5 @@ get "/date/*-*-*" do
   m = params[:splat][1]
   d = params[:splat][2]
 
-  # Note for slides - the above numbers are not validated...
-
   "The date requested is #{y}-#{m}-#{d}"
 end
