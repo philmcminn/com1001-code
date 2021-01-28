@@ -1,12 +1,12 @@
-# Ensure we use the test database
-ENV["APP_ENV"] = "test"
-
 # Configure coverage logging
 require "simplecov"
 SimpleCov.start do
   add_filter "/spec/"
 end
 SimpleCov.coverage_dir "coverage"
+
+# Ensure we use the test database
+ENV["APP_ENV"] = "test"
 
 # load the app
 require_relative "../app"
