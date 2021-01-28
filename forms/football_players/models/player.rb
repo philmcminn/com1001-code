@@ -11,7 +11,9 @@ class Player < Sequel::Model
     TimeDifference.between(dob, at_date).in_years.floor
   end
 
-  def id_exists?(id)
+  # "self.method" is how we define a class-level method in Ruby (in the same way
+  # we'd use "static" in Java, e.g., public static void classMethod(...))
+  def self.id_exists?(id)
     return false if id.nil? # check the id is not nil
     return false unless Validation.str_is_integer?(id) # check the id is an integer
     return false if Player[id].nil? # check the database has a record with this id
@@ -31,13 +33,15 @@ class Player < Sequel::Model
 
   def validate
     super
-    errors.add("first_name", "cannot be empty") if first_name.empty?
-    errors.add("surname", "cannot be empty") if surname.empty?
-    errors.add("gender", "cannot be empty") if gender.empty?
-    errors.add("club", "cannot be empty") if club.empty?
-    errors.add("country", "cannot be empty") if country.empty?
-    errors.add("position", "cannot be empty") if position.empty?
-    errors.add("date_of_birth", "cannot be empty") if date_of_birth.empty?
-    errors.add("date_of_birth", "is invalid") unless Validation.str_is_valid_yyy_mm_dd_date?(date_of_birth)
+    errors.add("first_name", "cannot be empty") if !first_name || first_name.empty?
+    errors.add("surname", "cannot be empty") if !surname || surname.empty?
+    errors.add("gender", "cannot be empty") if !gender || gender.empty?
+    errors.add("club", "cannot be empty") if !club || club.empty?
+    errors.add("country", "cannot be empty") if !country || country.empty?
+    errors.add("position", "cannot be empty") if !position || position.empty?
+    errors.add("date_of_birth", "cannot be empty") if !date_of_birth || date_of_birth.empty?
+    return unless date_of_birth && !Validation.str_is_valid_yyy_mm_dd_date?(date_of_birth)
+
+    errors.add("date_of_birth", "is invalid")
   end
 end
