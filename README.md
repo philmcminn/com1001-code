@@ -73,7 +73,6 @@ table below to help you out:
 | ``orm/``            | &bullet; _Interacting with a Database Using Ruby: Object-Relational Mapping_                               | TBA           |
 | ``routes/``         | &bullet; _Advanced Routes_                                                                                 | TBA           |
 | ``ruby/``           | &bullet; _Ruby Blocks_ <br /> &bullet; _Interacting with a Database using Ruby_ (see slides on Hashes)     | TBA <br/> TBA |
-| ``security/``       | &bullet; _Security and Web Applications_                                                                   | TBA           |
 | ``sessions/``       | &bullet; _Sessions_                                                                                        | TBA           |
 | ``unit_testing/``   | &bullet; _These are Testing Times!_                                                                        | TBA           |
 | ``views/``          | &bullet; _The Web Application Front-End_                                                                   | TBA           |
