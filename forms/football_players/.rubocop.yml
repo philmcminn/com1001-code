@@ -1,3 +1,6 @@
+require:
+  - rubocop-sequel
+
 AllCops:
   NewCops: enable
 

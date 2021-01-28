@@ -11,7 +11,7 @@ class Player < Sequel::Model
     TimeDifference.between(dob, at_date).in_years.floor
   end
 
-  def self.id_exists?(id)
+  def id_exists?(id)
     return false if id.nil? # check the id is not nil
     return false unless Validation.str_is_integer?(id) # check the id is an integer
     return false if Player[id].nil? # check the database has a record with this id
