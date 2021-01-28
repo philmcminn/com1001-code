@@ -1,4 +1,4 @@
-require_relative "../../helpers/spec_helper"
+require_relative "../spec_helper"
 
 RSpec.describe "Football Players App" do
   before(:all) do
