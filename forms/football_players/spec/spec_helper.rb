@@ -24,7 +24,7 @@ RSpec.configure do |config|
   config.include Rack::Test::Methods
 end
 
-# add a test player 
+# add a test player
 def add_test_player
   visit "/add"
   fill_in "first_name", with: "George"
@@ -33,7 +33,7 @@ def add_test_player
   fill_in "club", with: "Mantester Utd"
   fill_in "country", with: "Northern RSpec"
   fill_in "position", with: "Midfield"
-  fill_in "date_of_birth", with: "1946-05-22"  
+  fill_in "date_of_birth", with: "1946-05-22"
   click_button "Submit"
 end
 
