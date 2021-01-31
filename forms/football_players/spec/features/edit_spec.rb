@@ -13,7 +13,7 @@ describe "the edit page" do
     clear_database
   end
 
-  it "allows a player recrod to be changed" do
+  it "allows a player record to be changed" do
     add_test_player
     visit "/edit?id=1"
     fill_in "first_name", with: "Zinedine"

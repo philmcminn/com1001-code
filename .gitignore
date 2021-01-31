@@ -4,3 +4,4 @@ Gemfile.lock
 temp.sqlite
 log/
 coverage/
+capybara-*.html
