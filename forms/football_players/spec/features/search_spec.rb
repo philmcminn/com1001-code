@@ -10,39 +10,27 @@ describe "the search page" do
 
   context "with one record in the database" do
     it "lists the player" do
-      # prepare the database
       add_test_player
-
       visit "/search"
-      expect(page).to have_content "Test Player"
-
-      # reset the database
+      expect(page).to have_content "George Test"
       clear_database
     end
 
     it "does not list the player when a different club is searched for" do
-      # prepare the database
       add_test_player
-
       visit "/search"
       fill_in "club_search", with: "RSpec F.C."
       click_button "Submit"
       expect(page).to have_content "Your search revealed no players"
-
-      # reset the database
       clear_database
     end
 
     it "lists the player when their club is searched for" do
-      # prepare the database
       add_test_player
-
       visit "/search"
-      fill_in "club_search", with: "Test F.C."
+      fill_in "club_search", with: "Mantester Utd"
       click_button "Submit"
-      expect(page).to have_content "Test Player"
-
-      # reset the database
+      expect(page).to have_content "George Test"
       clear_database
     end
   end

@@ -14,18 +14,8 @@ describe "the add page" do
   end
 
   it "adds a player when all details are entered" do
-    visit "/add"
-    fill_in "first_name", with: "Mr"
-    fill_in "surname", with: "Test"
-    fill_in "gender", with: "Test"
-    fill_in "club", with: "Capybara Utd"
-    fill_in "country", with: "Great RSpec"
-    fill_in "position", with: "Goalkeeper"
-    fill_in "date_of_birth", with: "2000-01-01"
-    click_button "Submit"
-    expect(page).to have_content "Mr Test"
-
-    # clear out the database
+    add_test_player
+    expect(page).to have_content "George Test"
     clear_database
   end
 end

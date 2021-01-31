@@ -24,19 +24,20 @@ RSpec.configure do |config|
   config.include Rack::Test::Methods
 end
 
-# add some test data to our test database
+# add a test player 
 def add_test_player
-  player = Player.new(first_name: "Test",
-                      surname: "Player",
-                      gender: "-",
-                      club: "Test F.C.",
-                      position: "Left Back",
-                      country: "United Testdom",
-                      date_of_birth: "2020-01-01")
-  player.save_changes
+  visit "/add"
+  fill_in "first_name", with: "George"
+  fill_in "surname", with: "Test"
+  fill_in "gender", with: "M"
+  fill_in "club", with: "Mantester Utd"
+  fill_in "country", with: "Northern RSpec"
+  fill_in "position", with: "Midfield"
+  fill_in "date_of_birth", with: "1946-05-22"  
+  click_button "Submit"
 end
 
-# handy method to clear out the database
+# clear out the database
 def clear_database
   DB.from("players").delete
 end
