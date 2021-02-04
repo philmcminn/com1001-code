@@ -61,21 +61,21 @@ snippet of the example on the slide.
 If you're struggling to find the lecture in which an example appears, I've provided the
 table below to help you out:
 
-| Examples Directory  | Lecture(s)                                                                                                                                                               | Week(s)                           |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------| --------------------------------- |
-| ``basics/``         | &bullet; _An Introduction to Web Application Development – Sinatra Basics: Verbs, Routes, and Blocks_                                                                    | TBA                               |
-| ``controllers/``    | &bullet; _Web Application Architecture – The Model View Controller (MVC) Design Pattern_                                                                                 | TBA                               |
-| ``cookies/``        | &bullet; _Cookies_                                                                                                                                                       | TBA                               |
-| ``databases/``      | &bullet; _Introduction to Relational Databases and SQL_                                                                                                                  | TBA                               |
-| ``debugging/``      | &bullet; _Yesterday My Program Worked. Today It Does Not! Why?_ <br /> &bullet; _These are Testing Times!_                                                               | TBA <br/> TBA                     |
-| ``forms/``          | &bullet; _Forms, GET and POST_ <br /> &bullet; _Forms: Sanitising and Validating User Inputs_ <br /> &bullet; _Forms and Models_ <br /> &bullet; _Testing with Capybara_ | TBA <br/> TBA <br/> TBA <br/> TBA |
-| ``models/``         | &bullet; _Models in Sinatra_                                                                                                                                             | TBA                               |
-| ``orm/``            | &bullet; _Interacting with a Database Using Ruby: Object-Relational Mapping_                                                                                             | TBA                               |
-| ``routes/``         | &bullet; _Advanced Routes_                                                                                                                                               | TBA                               |
-| ``ruby/``           | &bullet; _Ruby Blocks_ <br /> &bullet; _Interacting with a Database using Ruby_ (see slides on Hashes)                                                                   | TBA <br/> TBA                     |
-| ``sessions/``       | &bullet; _Sessions_                                                                                                                                                      | TBA                               |
-| ``unit_testing/``   | &bullet; _These are Testing Times!_                                                                                                                                      | TBA                               |
-| ``views/``          | &bullet; _The Web Application Front-End_                                                                                                                                 | TBA                               |
+| Examples Directory  | Lecture(s)                                                                                                                                                  | Week(s)                   |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------| ------------------------- |
+| ``basics/``         | &bullet; _Sinatra Basics_                                                                                                                                   | 2                         |
+| ``controllers/``    | &bullet; _Model View Controller (MVC)_                                                                                                                      | 2                         |
+| ``cookies/``        | &bullet; _Cookies_                                                                                                                                          | 5                         |
+| ``databases/``      | &bullet; _Databases and SQLite_                                                                                                                             | 3                         |
+| ``debugging/``      | &bullet; _Debugging_ <br /> &bullet; _Testing_                                                                                                              | 1 <br/> 1                 |
+| ``forms/``          | &bullet; _Forms: GET and POST_ <br /> &bullet; _Forms: Sanitisation and Validation_ <br /> &bullet; _Forms and Models_ <br /> &bullet; _Acceptance Testing_ | 4 <br/> 4 <br/> 4 <br/> 5 |
+| ``models/``         | &bullet; _Models_                                                                                                                                           | 3                         |
+| ``orm/``            | &bullet; _Object-Relational Mapping_                                                                                                                        | 3                         |
+| ``routes/``         | &bullet; _Advanced Routes_                                                                                                                                  | 5                         |
+| ``ruby/``           | &bullet; _Blocks_ <br /> &bullet; _Object-Relational Mapping_ (see slides on Hashes)                                                                        | 2 <br/> 3                 |
+| ``sessions/``       | &bullet; _Sessions_                                                                                                                                         | 5                         |
+| ``unit_testing/``   | &bullet; _Testing_                                                                                                                                          | 1                         |
+| ``views/``          | &bullet; _Views_                                                                                                                                            | 2                         |
 
 # 4. If You Don't Like Codio...
 
