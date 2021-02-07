@@ -41,7 +41,7 @@ To clone the repository you will need to issue the following command:
 
 To run an example you'll need to change to the directory where it exists as a
 Ruby file. You'll need to ensure the appropriate gems are installed. Each
-directory contains a ``GemFile`` so it is easy for you to ensure this using
+directory contains a ``Gemfile`` so it is easy for you to ensure this using
 [Bundler](https://bundler.io). Bundler is already installed on Codio, so you
 just need to issue a ``bundle install`` command in the terminal in the
 appropriate directory. If you're using your own machine, which is _not
