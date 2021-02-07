@@ -95,7 +95,7 @@ First, you can develop everything on your own machine. However, this means you
 installing Ruby and getting everything working yourself – we are unable to
 provide support for students' individual machines. While getting Ruby set up
 tends to be relatively easy on Linux on Mac machines, Windows users typically
-encounter more problems. Also, do not forget your team members and your project
+encounter more problems. Also, do not forget your team members on your project
 who may prefer to use Codio, opening up various possibilities for
 incompatibilities and problems. Finally, remember that the team project will be
 marked using Codio. So everything needs to work on Codio, because the markers
