@@ -35,7 +35,7 @@ setup. This lecture is available as a video on
 
 To clone the repository you will need to issue the following command:
 
-``git clone git@github.com:philmcminn/com1001-code.git``
+``git clone https://github.com/philmcminn/com1001-code.git``
 
 ### Running an Example
 
