@@ -3,8 +3,20 @@ require: rubocop-rspec
 AllCops:
   NewCops: enable
 
+Metrics/AbcSize:
+  IgnoredMethods: ["classify"]
+
+Metrics/CyclomaticComplexity:
+  IgnoredMethods: ["classify"]  
+
 Metrics/BlockLength:
-  IgnoredMethods: ["describe", "context"]
+  IgnoredMethods: ["describe", "context", "classify"]
+
+Metrics/MethodLength:
+  IgnoredMethods: ["classify"]
+
+Metrics/PerceivedComplexity:
+  IgnoredMethods: ["classify"]
 
 RSpec/MissingExampleGroupArgument:
   Enabled: false
