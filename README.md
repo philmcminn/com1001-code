@@ -64,7 +64,7 @@ table below to help you out:
 | Examples Directory  | Lecture(s)                                                                                                                                                  | Week(s)                   |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------| ------------------------- |
 | ``basics/``         | &bullet; _Sinatra Basics_                                                                                                                                   | 2                         |
-| ``controllers/``    | &bullet; _Model View Controller (MVC)_                                                                                                                      | 2                         |
+| ``controllers/``    | &bullet; _Model View Controller (MVC)_                                                                                                                      | 3                         |
 | ``cookies/``        | &bullet; _Cookies_                                                                                                                                          | 5                         |
 | ``databases/``      | &bullet; _Databases and SQLite_                                                                                                                             | 3                         |
 | ``debugging/``      | &bullet; _Debugging_ <br /> &bullet; _Testing_                                                                                                              | 1 <br/> 1                 |
