@@ -35,13 +35,13 @@ setup. This lecture is available as a video on
 
 To clone the repository you will need to issue the following command:
 
-``git clone git@github.com:philmcminn/com1001-code.git``
+``git clone https://github.com/philmcminn/com1001-code.git``
 
 ### Running an Example
 
 To run an example you'll need to change to the directory where it exists as a
 Ruby file. You'll need to ensure the appropriate gems are installed. Each
-directory contains a ``GemFile`` so it is easy for you to ensure this using
+directory contains a ``Gemfile`` so it is easy for you to ensure this using
 [Bundler](https://bundler.io). Bundler is already installed on Codio, so you
 just need to issue a ``bundle install`` command in the terminal in the
 appropriate directory. If you're using your own machine, which is _not
@@ -64,7 +64,7 @@ table below to help you out:
 | Examples Directory  | Lecture(s)                                                                                                                                                  | Week(s)                   |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------| ------------------------- |
 | ``basics/``         | &bullet; _Sinatra Basics_                                                                                                                                   | 2                         |
-| ``controllers/``    | &bullet; _Model View Controller (MVC)_                                                                                                                      | 2                         |
+| ``controllers/``    | &bullet; _Model View Controller (MVC)_                                                                                                                      | 3                         |
 | ``cookies/``        | &bullet; _Cookies_                                                                                                                                          | 5                         |
 | ``databases/``      | &bullet; _Databases and SQLite_                                                                                                                             | 3                         |
 | ``debugging/``      | &bullet; _Debugging_ <br /> &bullet; _Testing_                                                                                                              | 1 <br/> 1                 |
@@ -95,7 +95,7 @@ First, you can develop everything on your own machine. However, this means you
 installing Ruby and getting everything working yourself – we are unable to
 provide support for students' individual machines. While getting Ruby set up
 tends to be relatively easy on Linux on Mac machines, Windows users typically
-encounter more problems. Also, do not forget your team members and your project
+encounter more problems. Also, do not forget your team members on your project
 who may prefer to use Codio, opening up various possibilities for
 incompatibilities and problems. Finally, remember that the team project will be
 marked using Codio. So everything needs to work on Codio, because the markers
