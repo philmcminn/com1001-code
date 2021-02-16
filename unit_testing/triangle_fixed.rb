@@ -14,7 +14,7 @@ def classify(side1, side2, side3)
   # side1, side2, and side3.
   #
   # Note that this is functionally equivalent to the
-  # code above that I've commmented out and does no
+  # code above that I've commmented out and does not
   # fix the bug.
   (side1, side2, side3) = [side1, side2, side3].sort
 
