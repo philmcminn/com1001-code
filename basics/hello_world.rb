@@ -5,9 +5,8 @@ get "/hello-world" do
   "Hello, World!"
 end
 
-# These lines of below just print the message for the URL that you need for Codio.
-# They are not needed for Sinatra applications in general.
-#
+# These lines of code below just print the message for the URL that you need for Codio.
+# You do not need them for Sinatra applications in general.
 if ENV["USER"] == "codio"
   box_name = ENV["CODIO_HOSTNAME"]
   port = settings.port
