@@ -1,7 +1,7 @@
 require "logger"
 require "sequel"
 
-DB = Sequel.sqlite("football_players.sqlite3",
+DB = Sequel.sqlite("../databases/football_players.sqlite3",
                    logger: Logger.new("db.log"))
 
 puts "Please enter a club name:"
