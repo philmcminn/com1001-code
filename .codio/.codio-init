@@ -1,0 +1,8 @@
+{
+  "commands": {
+    "Run": "cd /home/codio/workspace/{{path}}\nsinatra -b {{filename}}"
+  },
+  "preview": {
+    "No view – Sinatra not running": ""
+  }
+}

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+if [ "$USER" = "codio" ]
+then
+  # ensure we're in the directory of this script
+  cd "${0%/*}"
+ 
+  # copy scripts
+  sudo cp sinatra.rb /usr/local/bin/sinatra
+
+  # copy initial .codio file
+  cp .codio-init /home/codio/workspace/.codio
+  
+  echo "Complete"
+else
+  echo "This script should only be run on Codio"
+fi
