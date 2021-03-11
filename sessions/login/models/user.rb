@@ -1,5 +1,3 @@
-require "openssl"
-
 # A user record from the database
 class User < Sequel::Model
   def load(params)

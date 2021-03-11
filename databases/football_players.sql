@@ -1,3 +1,4 @@
+-- Create a table: ("--" denotes the start of a comment in SQL)
 CREATE TABLE players (
     id INTEGER PRIMARY KEY,
     first_name TEXT,
@@ -8,6 +9,8 @@ CREATE TABLE players (
     position TEXT,
     club TEXT
 );
+
+-- Insert records of data into the database:
 
 INSERT INTO players VALUES(1, "Dominic", "Calvert-Lewin", "M", "1997-03-16", "England", "Forward", "Everton");
 INSERT INTO players VALUES(2, "Sam", "Kerr", "F", "1993-09-10", "Australia", "Forward", "Chelsea");
@@ -21,6 +24,8 @@ INSERT INTO players VALUES(9, "Kevin", "De Bruyne", "M", "1991-06-28", "Belgium"
 INSERT INTO players VALUES(10, "Vivianne", "Miedema", "F", "1996-07-15", "Netherlands", "Forward", "Arsenal");
 INSERT INTO players VALUES(11, "Michael", "Keane", "M", "1993-01-11", "England", "Defender", "Everton");
 INSERT INTO players VALUES(12, "Ellie", "Roebuck", "F", "1999-09-23", "England", "Goalkeeper", "Manchester City");
+
+-- These commands perform various operations on the data – read (SELECT), update, and delete:
 
 SELECT * FROM players WHERE id = 1;
 
