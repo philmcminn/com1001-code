@@ -8,7 +8,7 @@ get "/login" do
   erb :login
 end
 
-post '/login' do
+post "/login" do
   @user = User.new
   @user.load(params)
   @error = nil
