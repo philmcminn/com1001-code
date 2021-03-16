@@ -9,9 +9,9 @@ then
   sudo cp sinatra.rb /usr/local/bin/sinatra
 
   # copy initial .codio file
-  cp .codio-init /home/codio/workspace/.codio
+  cp .codio_init /home/codio/workspace/.codio
   
-  echo "Complete"
+  echo "Successfully installed"
 else
   echo "This script should only be run on Codio"
 fi
