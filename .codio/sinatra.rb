@@ -13,13 +13,19 @@ require "socket"
 
 CODIO_FILE = ".codio"
 DEFAULT_RUBY_FILE = "app.rb"
-EMPH_RED = "\033[31m"    # see https://stackoverflow.com/questions/1108767/terminal-color-in-ruby
-EMPH_GREEN = "\033[32m"  # for more colours ...
-EMPH_END = "\033[0m"
+EMPH_BLUE = "\033[34m"
+EMPH_BROWN = "\033[33m"
+EMPH_CYAN = "\033[36m"   
+EMPH_END = "\033[0m"     
+EMPH_GREEN = "\033[32m"  
+EMPH_GREY = "\033[37m"  
+EMPH_MAGENTA = "\033[35m"  
+EMPH_RED = "\033[31m"    
 EMPH_YELLOW = "\033[33m"
 HOME_DIR = "/home/codio/"
 HOME_DIR_SHORT = "~/"
-HR_CHAR = "-"
+HR_DOUBLE_CHAR = "="
+HR_SINGLE_CHAR = "-"
 INFO_CHAR = "*"
 OPTION_VERBOSE = "v"
 OPTION_BUNDLE_INSTALL = "b"
@@ -34,6 +40,12 @@ WORKSPACE_DIR = "#{HOME_DIR}workspace/"
 
 $info_started = false
 
+def centre(str)
+  num_spaces = (terminal_width - str.length) / 2
+  spaces = " " * num_spaces
+  "#{spaces}#{str}"
+end
+
 def hostname
   # Prefer the value in Codio"s environment variable...
   hostname = ENV["hostname"]
@@ -44,30 +56,30 @@ def hostname
   Socket.gethostname
 end
 
+def footer
+  "#{EMPH_GREEN}#{hr_double}#{EMPH_END}"
+end
+
 def format_dir(dir)
   dir.sub(HOME_DIR, HOME_DIR_SHORT)
 end
 
-def puts_centre(str)
-  spaces = (terminal_width - str.length) / 2
-  print " " * spaces
-  puts str
+def header
+  "#{EMPH_GREEN}#{hr_double}\n#{centre(WELCOME_MESSAGE)}\n#{hr_single}#{EMPH_END}"
 end
 
-def puts_header
-  puts_hr
-  puts_centre(WELCOME_MESSAGE)
-  puts_hr
+def hr_double
+  HR_DOUBLE_CHAR * terminal_width
 end
 
-def puts_hr
-  puts HR_CHAR * terminal_width
+def hr_single
+  HR_SINGLE_CHAR * terminal_width
 end
 
-def puts_info(str, level = 0)
+def info(str, level = 0)
   $info_started = true
   tab = "  " * level
-  puts "#{tab}#{INFO_CHAR} #{str}"
+  "#{tab}#{INFO_CHAR} #{str}"
 end
 
 def options_arg?(val)
@@ -79,10 +91,10 @@ def running_on_codio?
 end
 
 def quit(problem, suggestion = nil)
-  puts_info("#{EMPH_RED}ABORTING – A serious problem occurred:#{EMPH_END}")
-  puts_info("Problem: #{problem}", 1)
-  puts_info("Suggestion: #{suggestion}", 1) if suggestion
-  puts_hr
+  puts info("#{EMPH_YELLOW}ABORTING – A serious problem occurred:#{EMPH_END}")
+  puts info("#{EMPH_RED}Problem:#{EMPH_END} #{problem}", 1)
+  puts info("#{EMPH_GREEN}Suggestion:#{EMPH_END} #{suggestion}", 1) if suggestion
+  puts footer
   abort
 end
 
@@ -122,7 +134,7 @@ def write_codio_file(url = nil)
 end
 
 # Announce the starting of the script
-puts_header
+puts header
 
 # Check we"re on Codio, this script is designed to work there only
 problem = "This command will only work with Codio"
@@ -167,7 +179,7 @@ end
 # Check there is a file to run
 if user_ruby_file_arg.nil?
   user_ruby_file = DEFAULT_RUBY_FILE
-  puts_info("No Ruby file supplied at the command line - attempting to use \"#{DEFAULT_RUBY_FILE}\"") if verbose
+  puts info("No Ruby file supplied at the command line - attempting to use \"#{DEFAULT_RUBY_FILE}\"") if verbose
 else
   user_ruby_file = ARGV[user_ruby_file_arg]
 end
@@ -178,7 +190,7 @@ if !File.exist?(user_ruby_file) && !user_ruby_file.end_with?(RUBY_EXTENSION)
 end
 
 if File.exist?(user_ruby_file)
-  puts_info("Found file \"#{user_ruby_file}\"") if verbose
+  puts info("Found file \"#{user_ruby_file}\"") if verbose
 else
   if user_ruby_file_arg.nil?
     problem = "There is no Ruby file to run."
@@ -198,12 +210,12 @@ ARGV.clear
 # Kill off existing Sinatra process, if there is one
 sp_status = sinatra_port_status
 unless sp_status == :refused
-  puts_info("Another process is running on port #{PORT}...") if verbose
+  puts info("Another process is running on port #{PORT}...") if verbose
 
   # find other process
   this_pid = Process.pid
   killed_other_sinatra = false
-  puts_info("Attempting to find other Sinatra process (this process ID is #{this_pid})", 1) if verbose
+  puts info("Attempting to find other Sinatra process (this process ID is #{this_pid})", 1) if verbose
   `ps -xhopid,cmd`.split("\n").each do |process_line|
     match = process_line.match(/^\s*(?<pid>\S+)\s+(?<cmd>.+)$/)
     # ensure we don"t kill this process...
@@ -212,18 +224,18 @@ unless sp_status == :refused
     # ensure the proess was started by this script
     next unless match[:cmd].start_with?(SINATRA_PROCESS)
 
-    puts_info("Killing process #{match[:pid]}", 2) if verbose
+    puts info("Killing process #{match[:pid]}", 2) if verbose
     system("kill #{match[:pid]}")
     killed_other_sinatra = true
   end
   unless killed_other_sinatra
-    puts_info("No other process found emanating from this script on port #{PORT}", 2) if verbose
+    puts info("No other process found emanating from this script on port #{PORT}", 2) if verbose
     problem = "Another process is running on port #{PORT} needed by Sinatra."
     suggestion = "Unless you know what this process is, try restarting the box (Project->Restart Box)."
     quit(problem, suggestion)
   end
 
-  puts_info("Waiting for process to shutdown...", 2) if verbose
+  puts info("Waiting for process to shutdown...", 2) if verbose
   timeout = Time.now + TIMEOUT
   until (sp_status == :refused) || (Time.now > timeout)
     latest_status = sinatra_port_status
@@ -231,11 +243,11 @@ unless sp_status == :refused
       sleep SLEEP
     else
       sp_status = latest_status
-      puts_info("Port #{PORT} status: #{sp_status}", 3) if verbose
+      puts info("Port #{PORT} status: #{sp_status}", 3) if verbose
     end
   end
   if sp_status == :refused
-    puts_info("... done", 2) if verbose
+    puts info("... done", 2) if verbose
   else
     problem = "Another process is running on port #{PORT} needed by Sinatra, and it could not be shut down."
     suggestion = "Unless you know what this process is, try restarting the box (Project->Restart Box)."
@@ -246,13 +258,13 @@ end
 # Do a bundle install, if request and there's a Gemfile in this directory
 if do_bundle_install
   if File.file?("Gemfile")
-    puts_info("Running bundler...")
+    puts info("Running bundler...")
     system("bundle install")
   elsif verbose
-    puts_info("Options requested to run bundler, but there is no local Gemfile.")
+    puts info("Options requested to run bundler, but there is no local Gemfile.")
   end
 elsif verbose
-  puts_info("Option to run bundler not set, so no gems installed.")
+  puts info("Option to run bundler not set, so no gems installed.")
 end
 
 # Include user"s Sinatra code
@@ -279,10 +291,10 @@ end
 # Set the entry URL to the application
 base_url = "https://#{hostname}-#{PORT}.codio.io"
 entry_url = "#{base_url}#{entry}"
-puts_hr if $info_started
-puts_info("This Sinatra application is accessible at: #{EMPH_YELLOW}#{entry_url}#{EMPH_END}")
-puts_info("Handy tip: don't press CTRL+C until after you have viewed the page!")
-puts_hr
+puts hr if $info_started
+puts info("This Sinatra application is accessible at: #{EMPH_YELLOW}#{entry_url}#{EMPH_END}")
+puts info("#{EMPH_RED}Handy tip:#{EMPH_END} don't press CTRL+C until after you have viewed the ^^^ URL!")
+puts footer
 
 # Write .codio file to reflect app is running
 write_codio_file(entry_url)
