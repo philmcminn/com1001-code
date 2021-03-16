@@ -230,7 +230,7 @@ unless sp_status == :refused
   end
 end
 
-# Do a bundle install, if request and there"s a Gemfile in this directory
+# Do a bundle install, if request and there's a Gemfile in this directory
 if do_bundle_install
   if File.file?("Gemfile")
     puts_info("Running bundler...")
