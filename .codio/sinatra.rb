@@ -191,7 +191,7 @@ unless sp_status == :refused
   this_pid = Process.pid
   killed_other_sinatra = false
   puts_info("Attempting to find other Sinatra process (this process ID is #{this_pid})", 1) if verbose
-  `ps -hopid,cmd`.split("\n").each do |process_line|
+  `ps -xhopid,cmd`.split("\n").each do |process_line|
     match = process_line.match(/^\s*(?<pid>\S+)\s+(?<cmd>.+)$/)
     # ensure we don"t kill this process...
     next unless this_pid != match[:pid].to_i
