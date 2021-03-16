@@ -2,8 +2,8 @@
 
 ###############################################################
 #                                                             #
-# Sinatra warpper script                                      #
-# by Phil McMinn, 2021. Version: 0.1                          #
+# Sinatra wrapper script                                      #
+# by Phil McMinn, 2021. Version: 0.2                          #
 #                                                             #
 # Enable students to start, stop, and use Sinatra more easily #
 #                                                             #
