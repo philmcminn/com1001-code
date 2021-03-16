@@ -4,4 +4,4 @@ set :bind, "0.0.0.0"
 include ERB::Util
 
 require "require_all"
-require_all "controllers"
+require_rel "controllers"

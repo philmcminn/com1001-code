@@ -10,9 +10,5 @@ set :bind, '0.0.0.0'
 enable :sessions
 set :session_secret, "$g]Rd2M/WbJ`~~<GZWdH@Fm'ESk2_gckCtLJJkySYG"
 
-# Database
-require_relative "db/db"
-
 # App
-require_all "models"
-require_all "controllers"
+require_rel "db/db", "models", "controllers"

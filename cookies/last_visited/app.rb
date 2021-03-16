@@ -6,4 +6,4 @@ require "sinatra"
 set :bind, '0.0.0.0'
 
 # App
-require_all "controllers"
+require_rel "controllers"

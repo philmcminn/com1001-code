@@ -2,4 +2,4 @@ require "sinatra"
 set :bind, "0.0.0.0"
 
 require "require_all"
-require_all "controllers"
+require_rel "controllers"
