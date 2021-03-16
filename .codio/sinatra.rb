@@ -17,17 +17,20 @@ EMPH_RED = "\033[31m"    # see https://stackoverflow.com/questions/1108767/termi
 EMPH_GREEN = "\033[32m"  # for more colours ...
 EMPH_END = "\033[0m"
 EMPH_YELLOW = "\033[33m"
-HOME_DIR = "/home/codio/workspace/"
+HOME_DIR = "/home/codio/"
+HOME_DIR_SHORT = "~/"
 HR_CHAR = "-"
 INFO_CHAR = "*"
 OPTION_VERBOSE = "v"
 OPTION_BUNDLE_INSTALL = "b"
 OPTION_PREFIX = "-"
 PORT = 4567
+RUBY_EXTENSION = ".rb"
 SINATRA_PROCESS = "ruby /usr/local/bin/sinatra"
 SLEEP = 0.1
 TIMEOUT = 5
 WELCOME_MESSAGE = "Starting Sinatra..."
+WORKSPACE_DIR = "#{HOME_DIR}workspace/"
 
 $info_started = false
 
@@ -39,6 +42,10 @@ def hostname
   # ... but use Ruby's method if for whatever
   # reason the environment variable is not set
   Socket.gethostname
+end
+
+def format_dir(dir)
+  dir.sub(HOME_DIR, HOME_DIR_SHORT)
 end
 
 def puts_centre(str)
@@ -104,14 +111,14 @@ def write_codio_file(url = nil)
   config_contents = <<~JSON
     {
       "commands": {
-        "Run": "cd #{HOME_DIR}{{path}}\\nsinatra -b {{filename}}"
+        "Run": "cd #{WORKSPACE_DIR}{{path}}\\nsinatra -b {{filename}}"
       },
       "preview": {
         #{preview}
       }
     }
   JSON
-  File.write("#{HOME_DIR}#{CODIO_FILE}", config_contents)
+  File.write("#{WORKSPACE_DIR}#{CODIO_FILE}", config_contents)
 end
 
 # Announce the starting of the script
@@ -165,17 +172,23 @@ else
   user_ruby_file = ARGV[user_ruby_file_arg]
 end
 
-unless File.exist?(user_ruby_file)
+if !File.exist?(user_ruby_file) && !user_ruby_file.end_with?(RUBY_EXTENSION)
   # try adding the .rb extension
-  user_ruby_file = "#{user_ruby_file}.rb"
+  user_ruby_file = "#{user_ruby_file}#{RUBY_EXTENSION}"
 end
 
 if File.exist?(user_ruby_file)
   puts_info("Found file \"#{user_ruby_file}\"") if verbose
 else
-  problem = "There is no Ruby file to run."
-  suggestion = "Create an \"app.rb\" file in this directory (#{Dir.pwd}), and run this command again, " \
-               "or, supply a filename like this: \"sinatra file.rb\"."
+  if user_ruby_file_arg.nil?
+    problem = "There is no Ruby file to run."
+    suggestion = "Create an \"app.rb\" file in this directory (#{format_dir(Dir.pwd)}), and run the sinatra command again, " \
+                 "or, supply a filename like this: \"sinatra file.rb\"."
+  else 
+    problem = "The file \"#{user_ruby_file}\" does not exist."
+    suggestion = "Create the file \"#{user_ruby_file}\" in this directory (#{format_dir(Dir.pwd)}), and run this " \
+                 "command again, or, create a file named \"app.rb\" and run the sinatra command with no filename supplied."
+  end
   quit(problem, suggestion)
 end
 
