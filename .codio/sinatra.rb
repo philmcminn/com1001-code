@@ -68,7 +68,7 @@ def format_dir(dir)
 end
 
 def header
-  "#{EMPH_BOLD}#{EMPH_GREY}#{hr_double}\n#{centre(WELCOME_MESSAGE)}\n#{hr_single}#{EMPH_END}"
+  "\n#{EMPH_BOLD}#{EMPH_GREY}#{hr_double}\n#{centre(WELCOME_MESSAGE)}\n#{hr_single}#{EMPH_END}"
 end
 
 def hr_double
@@ -294,7 +294,7 @@ end
 # Set the entry URL to the application
 base_url = "https://#{hostname}-#{PORT}.codio.io"
 entry_url = "#{base_url}#{entry}"
-puts hr if $info_started
+puts hr_single if $info_started
 puts info("This Sinatra application is accessible at: #{EMPH_YELLOW}#{EMPH_UNDERLINE}#{entry_url}#{EMPH_END}")
 puts info("#{EMPH_GREEN}Handy tip:#{EMPH_END} don't press CTRL+C until #{EMPH_ITALIC}after#{EMPH_END} you have viewed the ^^^ URL!")
 puts footer
@@ -307,3 +307,6 @@ Sinatra::Application.run!
 
 # Rewrite .codio file to reflect that app no longer running
 write_codio_file
+
+# Finally write another footer for good measure
+puts "#{footer}\n\n"
