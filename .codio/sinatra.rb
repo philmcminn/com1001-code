@@ -13,6 +13,9 @@ require "socket"
 
 CODIO_FILE = ".codio"
 DEFAULT_RUBY_FILE = "app.rb"
+EMPH_BOLD = "\033[1m"
+EMPH_ITALIC = "\033[3m"
+EMPH_UNDERLINE = "\033[4m"
 EMPH_BLUE = "\033[34m"
 EMPH_BROWN = "\033[33m"
 EMPH_CYAN = "\033[36m"   
@@ -35,7 +38,7 @@ RUBY_EXTENSION = ".rb"
 SINATRA_PROCESS = "ruby /usr/local/bin/sinatra"
 SLEEP = 0.1
 TIMEOUT = 5
-WELCOME_MESSAGE = "Starting Sinatra..."
+WELCOME_MESSAGE = "STARTING SINATRA..."
 WORKSPACE_DIR = "#{HOME_DIR}workspace/"
 
 $info_started = false
@@ -57,7 +60,7 @@ def hostname
 end
 
 def footer
-  "#{EMPH_GREEN}#{hr_double}#{EMPH_END}"
+  "#{EMPH_BOLD}#{hr_double}#{EMPH_END}"
 end
 
 def format_dir(dir)
@@ -65,7 +68,7 @@ def format_dir(dir)
 end
 
 def header
-  "#{EMPH_GREEN}#{hr_double}\n#{centre(WELCOME_MESSAGE)}\n#{hr_single}#{EMPH_END}"
+  "#{EMPH_BOLD}#{EMPH_GREY}#{hr_double}\n#{centre(WELCOME_MESSAGE)}\n#{hr_single}#{EMPH_END}"
 end
 
 def hr_double
@@ -292,8 +295,8 @@ end
 base_url = "https://#{hostname}-#{PORT}.codio.io"
 entry_url = "#{base_url}#{entry}"
 puts hr if $info_started
-puts info("This Sinatra application is accessible at: #{EMPH_YELLOW}#{entry_url}#{EMPH_END}")
-puts info("#{EMPH_RED}Handy tip:#{EMPH_END} don't press CTRL+C until after you have viewed the ^^^ URL!")
+puts info("This Sinatra application is accessible at: #{EMPH_YELLOW}#{EMPH_UNDERLINE}#{entry_url}#{EMPH_END}")
+puts info("#{EMPH_GREEN}Handy tip:#{EMPH_END} don't press CTRL+C until #{EMPH_ITALIC}after#{EMPH_END} you have viewed the ^^^ URL!")
 puts footer
 
 # Write .codio file to reflect app is running
