@@ -283,7 +283,7 @@ problem = "Your Sinatra application does not contain any routes."
 suggestion = "Add some routes to your Ruby file. See the lectures on how to do this."
 quit(problem, suggestion) if Sinatra::Application.routes["GET"].nil?
 Sinatra::Application.routes["GET"].each do |route|
-  path = route[0]
+  path = route[0].to_s
   entry = path if entry.nil?
   if path == "/"
     entry = path
