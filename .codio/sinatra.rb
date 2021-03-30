@@ -142,7 +142,7 @@ puts header
 # Check we"re on Codio, this script is designed to work there only
 problem = "This command will only work with Codio"
 suggestion = "Use Codio rather than your own machine. There are ways in which you can still make the most " \
-             "of your machine while still using Codio - talk to a member of staff if you are aware of these."
+             "of your machine while still using Codio - talk to a member of staff if you are not aware of these."
 quit(problem, suggestion) unless running_on_codio?
 
 # Check the order of the arguments
