@@ -308,5 +308,4 @@ Sinatra::Application.run!
 # Rewrite .codio file to reflect that app no longer running
 write_codio_file
 
-# Finally write another footer for good measure
 puts "#{footer}\n\n"
