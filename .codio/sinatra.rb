@@ -270,7 +270,7 @@ elsif verbose
   puts info("Option to run bundler not set, so no gems installed.")
 end
 
-# Include user"s Sinatra code
+# Include user's Sinatra code
 require_relative "#{Dir.pwd}/#{user_ruby_file}"
 
 # Configure Sinatra for Codio use
