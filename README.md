@@ -67,6 +67,7 @@ table below to help you out:
 | ``controllers/``    | &bullet; _Model View Controller (MVC)_                                                                                                                      | 3                         |
 | ``cookies/``        | &bullet; _Cookies_                                                                                                                                          | 5                         |
 | ``databases/``      | &bullet; _Databases and SQLite_                                                                                                                             | 3                         |
+| ``databases-refactoring/``      | &bullet; _Refactoring_                                                                                                                             | 7                         |
 | ``debugging/``      | &bullet; _Debugging_ <br /> &bullet; _Testing_                                                                                                              | 1 <br/> 1                 |
 | ``forms/``          | &bullet; _Forms: GET and POST_ <br /> &bullet; _Forms: Sanitisation and Validation_ <br /> &bullet; _Forms and Models_ <br /> &bullet; _Acceptance Testing_ | 4 <br/> 4 <br/> 4 <br/> 5 |
 | ``models/``         | &bullet; _Models_                                                                                                                                           | 3                         |
